@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Visual Doppelganger</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <script src="/static/script.js"></script>
+
+    <!-- Add EmailJS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "JlD8T5SOu2dXKRnSW",
+        });
+    })();
+    </script>
+</head> 
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="blocks" style="--i:1;"></div>
+        <div class="blocks" style="--i:2;"></div>
+        <div class="blocks" style="--i:3;"></div>
+        <div class="blocks" style="--i:4;"></div>
+        <div class="blocks" style="--i:5;"></div>
+        <div class="blocks" style="--i:6;"></div>
+        <div class="blocks" style="--i:7;"></div>
+        <div class="blocks" style="--i:8;"></div>
+        <div class="blocks" style="--i:9;"></div>
+        <div class="blocks" style="--i:10;"></div>
+        <div class="blocks" style="--i:11;"></div>
+        <div class="blocks" style="--i:12;"></div>
+        <div class="blocks" style="--i:13;"></div>
+        <div class="blocks" style="--i:14;"></div>
+        <div class="blocks" style="--i:15;"></div>
+        <div class="blocks" style="--i:16;"></div>
+        <div class="blocks" style="--i:17;"></div>
+        <div class="blocks" style="--i:18;"></div>
+        <div class="blocks" style="--i:19;"></div>
+        <div class="blocks" style="--i:20;"></div>
+        <div class="preloader_text">
+            <h3>Loading...</h3>
+        </div>
+    </div>
+    
+    <!-- Hide the content till the page is fully loaded -->
+    <div id="body_content">
+        <header class="header" id="header">
+            <div class="navbar">
+                <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" style="width: 55px; height: 55px;">
+                <ul class="nav_list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#try">Try</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="toggle_button">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div> 
+
+            <!-- Dropdown menu -->
+            <div class="dropdown_menu"> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#try">Try</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div> 
+
+            <script> 
+                const toggleButton = document.querySelector('.toggle_button'); 
+                const toggleButtonIcon = document.querySelector('.toggle_button i');
+                const dropdownMenu = document.querySelector('.dropdown_menu');
+        
+                toggleButton.onclick = function () {
+                    dropdownMenu.classList.toggle('open');
+                    const isOpen = dropdownMenu.classList.contains('open');
+        
+                    toggleButtonIcon.classList = isOpen
+                        ? 'fa-solid fa-xmark'
+                        : 'fa-solid fa-bars'
+                }
+            </script>
+        </header>
+
+        <main class="main" id="main">
+            <div class="container">
+                <section class="section" id="about">
+                    <h1 class="welcome">Welcome to AI Visual Doppelganger</h1> 
+                    <p class="about-paragraph">
+                        Advanced AI algorithms to replicate images with a unique twist
+                        in a few minutes. It uses generic algorithms to evolve a 
+                        population of binary individuals, gradually optimizing them to
+                        match the input image while introducing a camoflage pattern.
+                    </p>
+                </section>
+
+                <section class="section" id="try">
+                    <h2>Try</h2>
+                    <p class="try-paragraph">
+                        Experience the fascinating world of image replication with AI 
+                        Visual Doppelganger. Upload your image now and witness the power
+                        of artificial intelligence in action!
+                    </p>
+                    <!-- Form to upload the image -->
+                    <form class="uploadImage-form" action="/process" method="post" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <label for="image">Upload an image: </label>
+                            <input type="file" name="image" id="image" accept="image/*" required>
+                        </div>
+                        <button type="submit" onclick="showLoadingSpinner()">Replicate</button>
+                    </form>
+
+                    <!-- Loading Spinner -->
+                    <div class="loading" id="loadingSpinner" style="display: none;">
+                        <div class="blocks" style="--i:1;"></div>
+                        <div class="blocks" style="--i:2;"></div>
+                        <div class="blocks" style="--i:3;"></div>
+                        <div class="blocks" style="--i:4;"></div>
+                        <div class="blocks" style="--i:5;"></div>
+                        <div class="blocks" style="--i:6;"></div>
+                        <div class="blocks" style="--i:7;"></div>
+                        <div class="blocks" style="--i:8;"></div>
+                        <div class="blocks" style="--i:9;"></div>
+                        <div class="blocks" style="--i:10;"></div>
+                        <div class="blocks" style="--i:11;"></div>
+                        <div class="blocks" style="--i:12;"></div>
+                        <div class="blocks" style="--i:13;"></div>
+                        <div class="blocks" style="--i:14;"></div>
+                        <div class="blocks" style="--i:15;"></div>
+                        <div class="blocks" style="--i:16;"></div>
+                        <div class="blocks" style="--i:17;"></div>
+                        <div class="blocks" style="--i:18;"></div>
+                        <div class="blocks" style="--i:19;"></div>
+                        <div class="blocks" style="--i:20;"></div>
+                        <div class="text">
+                            <h3>Replicating</h3>
+                        </div>
+                    </div>
+
+                    <!-- Display the original image -->
+                    <div class="originalImage-container">
+                        <h4>Original Image</h4>
+                        <img id="originalImage">
+                    </div>
+
+                    <!-- Display the replicated image -->
+                    <div class="replicatedImage-container">
+                        <h4>Replicated Image</h4>
+                        <img id="replicatedImage">
+
+                        <div class="donwload-button">
+                            <!-- Download button for replicated image -->
+                            <button id="downloadButton" onclick="downloadReplicatedImage()">Download</button>
+                        </div>
+                    </div>
+
+                    <script async>
+                        // Function to show the loading spinner
+                        /* function showLoadingSpinner() {
+                            if(!validateImage()) {
+                                return; 
+                            } else {
+                                document.getElementById('loadingSpinner').style.display = 'block';
+                            }
+                        }
+
+                        // Function to hide the loading spinner
+                        function hideLoadingSpinner() {
+                            document.getElementById('loadingSpinner').style.display = 'none';
+                        }
+
+                        // updateImages function to update image & enable to download the replicated img
+                        function updateImages(originalImageData, replicatedImageData) {
+                            document.getElementById('originalImage').src = "data:image/png;base64," + originalImageData;
+                            document.getElementById('replicatedImage').src = "data:image/png;base64," + replicatedImageData;
+                            hideLoadingSpinner(); // Hide the loading spinner after updating images
+                        } */
+
+                        // Call the updateImages function with the provided parameters
+                        updateImages("{{ original_image }}", "{{ replicated_image }}");
+
+                        // Function to download the replicated image
+                        /* function downloadReplicatedImage() {
+                            var replicatedImage = document.getElementById('replicatedImage');
+                            var link = document.createElement('a');
+                            link.href = replicatedImage.src;
+                            link.download = 'replicated_image.png';
+                            link.click();
+                        } */
+                    </script>
+                </section>
+
+                <section class="section" id="faq">
+                    <h2>FAQ</h2> 
+                    <dl>
+                        <dt>Q: What types of images can I replicate?</dt>
+                        <dd>
+                            A: You can replicate images in JPG, PNG, WEBP, or GIF format. However,
+                            it's low-quality in GIF format. 
+                        </dd>
+                        <dt>Q: How long does it take?</dt>
+                        <dd>
+                            A: The replication process duration depends on factors such as image
+                            complexity and the specified number of generations. Typically, it takes
+                            a few minutes to complete.
+                        </dd>
+                        <dt>Q: How does it work?</dt>
+                        <dd>
+                            A: You can upload your desired image, and then you will be able to
+                            view the original image alongside the replicated image to observe the
+                            replication process's effectiveness.
+                        </dd>
+                        <dt>Q. Why am I unable to download?</dt>
+                        <dd>
+                            A. Please ensure that you upload image and replicate before download.
+                        </dd>
+                        <dt>Q: Can I customize the replication process?</dt>
+                        <dd>
+                            A: Currently, the replication process parameters (e.g., population
+                            size, mutation rate) are predefined. However, future updates may
+                            include customization options.
+                        </dd>
+                    </dl>
+                </section>
+
+                <section class="section" id="contact">
+                    <h2>Contact</h2>
+                    <form class="contact-form" action="/contact" method="post">
+                        <label for="name">Name:</label><br>
+                        <input type="name" id="name" name="name" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="subject">Subject:</label><br>
+                        <input type="subject" id="subject" name="subject" required><br>
+                        <label for="message">Inquiry: </label><br>
+                        <textarea id="message" name="message" placeholder="Report issues, request anything, etc." required></textarea><br>
+                        <input class="submit-button" type="submit" value="Submit" onclick="sendMail()">
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="footer__nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#try">Try</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <p class="footer__copyright">&copy; 2024 AI Visual Doppelganger</p>
+        </footer>
+
+        <!-- SCROLL UP -->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+</body>
+</html>
