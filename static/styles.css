@@ -360,7 +360,7 @@ dd {
 }
 @media screen and (min-height: 696px) and (max-height: 955px) {
     .text {
-        top: 35%; 
+        top: 30%; 
     }
 }
 @keyframes animateText {
