@@ -1,2 +1,3 @@
 Flask
 Gunicorn
+Pillow==8.4.0
