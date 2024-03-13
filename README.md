@@ -19,7 +19,7 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 3. **Clone the Repository:** Clone the repository to your local machine by running `git clone https://github.com/your-username/AI-Visual-Doppelganger.git`.
 4. **Dependencies:** Install dependencies by running `pip install -r requirements.txt`.
 5. **Static Files:** Ensure that the static files (such as images, CSS, and JavaScript) are accessible and properly linked in the project directly.
-6. **Run the Application:** Once you have completed these steps, you can run the project on your devices by navigating to the project directory and running `python app.py`.
+6. **Run the Application:** Once you have completed these steps, you can run the project on your devices by navigating to the project directory and running `python main.py`.
 7. **Access the Application:** After running the Flask application, you can access the project in your web browser by visiting ``.
 
 ## Usage
