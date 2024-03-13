@@ -2,3 +2,5 @@ Flask
 Gunicorn
 Pillow==8.4.0
 numpy==1.26.2
+scikit-image==0.19.0
+scikit-learn==0.24.2
