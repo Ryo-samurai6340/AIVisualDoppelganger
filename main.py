@@ -21,7 +21,7 @@ def process_image(file_path, generations, mutation_rate):
     image_array = np.array(img)  # convert the img to a binary array.
     
     # set up the genetic algo w population size and chromosome length
-    population_size = 50
+    population_size = 20
     chromosome_length = image_array.size
     genetic_algorithm = GeneticAlgorithm(population_size, chromosome_length)
 
