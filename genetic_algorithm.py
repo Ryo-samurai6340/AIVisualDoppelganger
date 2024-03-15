@@ -125,7 +125,7 @@ if __name__ == "__main__":
     population_size = 20
     chromosome_length = len(original_image)
     generations = 1
-    mutation_rate = 0.1
+    mutation_rate = 0.01
 
     # create an instance of the genetic algo class w specified parameters
     genetic_algorithm = GeneticAlgorithm(population_size, chromosome_length)
