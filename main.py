@@ -64,7 +64,7 @@ def process():
 
     # Set the number of generations and mutation rate
     generations = 1
-    mutation_rate = 0.1
+    mutation_rate = 0.01
     img = Image.open(file_path)  # Open the uploaded img using Pillow
 
     # Process the uploaded image using the genetic algo
