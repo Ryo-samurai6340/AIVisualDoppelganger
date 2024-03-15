@@ -122,7 +122,7 @@ if __name__ == "__main__":
     original_image = np.array([0, 1, 0, 1, 0, 1, 0, 1])
 
     # Set parametes for the genetic algo
-    population_size = 20
+    population_size = 10
     chromosome_length = len(original_image)
     generations = 1
     mutation_rate = 0.01
