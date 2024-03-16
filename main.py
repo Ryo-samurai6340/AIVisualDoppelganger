@@ -4,11 +4,7 @@ import os
 import io
 import base64
 import numpy as np
-import logging
 from genetic_algorithm import GeneticAlgorithm
-
-# configure logging
-logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)  # create Flask web app
 
@@ -21,7 +17,6 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # define function to process the uploaded img
 def process_image(file_path, generations, mutation_rate):
-    logging.info("Processing iamge: %s", file_path)
     img = Image.open(file_path)  # open the image using Pillow
     image_array = np.array(img)  # convert the img to a binary array.
     
@@ -54,7 +49,7 @@ def process():
 
     # Get the uploaded file from teh form 
     file = request.files['image']
-    logging.info("Uploaded file: %s", file.filename)
+    print("Uploaded file:", file.filename)
 
     if file.filename == '':
         return "No selected file"
@@ -62,7 +57,7 @@ def process():
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
     
-    logging.info("File saved to: %s", file_path)
+    print("File saved to:", file_path)
 
     # Define original_image is a binary array that shows the desired camouflage pattern
     # original_image = np.array([0, 1, 0, 1, 0, 1, 0, 1])
