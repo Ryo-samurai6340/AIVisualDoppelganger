@@ -1,2 +1,2 @@
 # Set the worker timeout to 120 seconds
-# timeout = 3600
+timeout = 3600
