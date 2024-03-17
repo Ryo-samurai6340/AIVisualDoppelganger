@@ -12,7 +12,7 @@ function validateImage() {
     let image = document.getElementById("image").files[0]; // Get uploaded image file
     if (!image) {
         // Display error message if no image is uploaded
-        alert("Please upload an image.");
+        // alert("Please upload an image.");
         return false; // Return false if no image is uploaded
     }
     return true; // Return true if image is uploaded
