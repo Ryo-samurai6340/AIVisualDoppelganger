@@ -89,7 +89,28 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+    // Send the form data to the server
+    fetch('/send-mail', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(parms),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        // Display a success message after the email is sent
+        return response.text();
+    })
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        // Handle errors if necessary
+    });
 }
 
 // To show scrollup 
