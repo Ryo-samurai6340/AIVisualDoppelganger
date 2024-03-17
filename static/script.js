@@ -82,34 +82,24 @@ function sendMail() {
     if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
+
+    // Create a FormData object to send form data to the server
+    let formData = new FormData(document.getElementById('contactForm'));
     
-    let parms = {
-        from_name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        subject : document.getElementById("subject").value, 
-        message : document.getElementById("message").value,
-    }
-    // Send the form data to the server
+    // Send form data to the server using fetch API
     fetch('/send-mail', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(parms),
+        body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        // Display a success message after the email is sent
-        return response.text();
-    })
+    .then(response => response.json())
     .then(data => {
-        alert(data);
+        // Display the success message in an alert
+        alert(data.message);
     })
     .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        // Handle errors if necessary
+        // Display an error message if something goes wrong
+        console.error('Error:', error);
+        alert('An error occurred while sending the email.');
     });
 }
 
