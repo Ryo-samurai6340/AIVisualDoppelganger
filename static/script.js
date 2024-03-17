@@ -59,6 +59,17 @@ function downloadReplicatedImage() {
     link.click();
 }
 
+function dismissAlertMessage() {
+    document.getElementById('alertMessage').style.display = 'none';
+}
+
+function showAlertMessage() {
+    // Show the alert message
+    document.getElementById('alertMessage').style.display = 'block';
+}
+window.addEventListener('load', showAlertMessage);
+document.getElementById('okButton').addEventListener('click', dismissAlertMessage);
+
 // Function to validate input fields
 function validateForm() {
     // Get values of input fields
