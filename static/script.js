@@ -78,7 +78,12 @@ function validateContactForm() {
 
         return false; // Return false to prevent form submission
     }
-    return true; // Return true if all fields are filled
+    else {
+        // Show message if successfully submitted
+        contactMessage.classList.add('color-blue');
+        contactMessage.textContent = 'Your message submitted ✅';
+        return true; // Return true if all fields are filled
+    }
 }
 
 // Function to enable users to send message from the contact section
@@ -95,9 +100,6 @@ function sendMail() {
         message : document.getElementById("message").value,
         submitStatus : document.getElementById("submit-status").value,
     }
-    // Show message if successfully submitted
-    contactMessage.classList.add('color-blue');
-    contactMessage.textContent = 'Your message submitted ✅';
 }
 
 // To show scrollup 
