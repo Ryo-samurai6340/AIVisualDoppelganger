@@ -76,17 +76,6 @@ function validateForm() {
     return true; // Return true if all fields are filled
 }
 
-function showAlertMessage(message) {
-    var alertDiv = document.createElement('div');
-    alertDiv.className = 'alert';
-    alertDiv.textContent = message;
-    document.body.appendChild(alertDiv);
-    
-    // setTimeout(function() {
-    //     alertDiv.style.display = 'none';
-    // }, 3000);
-}
-
 // Function to enable users to send message from the contact section
 function sendMail() {
     // Validate the form before sending the email
@@ -100,9 +89,7 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
-        showAlertMessage("Your enquiry has been sent successfully!");
-    });
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
 }
 
 // To show scrollup 
@@ -114,4 +101,3 @@ const scrollUp = () => {
                         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp);
-
