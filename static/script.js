@@ -81,9 +81,10 @@ function showAlertMessage(message) {
     alertDiv.className = 'alert';
     alertDiv.textContent = message;
     document.body.appendChild(alertDiv);
-    setTimeout(function() {
-        alertDiv.style.display = 'none';
-    }, 3000);
+    
+    // setTimeout(function() {
+    //     alertDiv.style.display = 'none';
+    // }, 3000);
 }
 
 // Function to enable users to send message from the contact section
