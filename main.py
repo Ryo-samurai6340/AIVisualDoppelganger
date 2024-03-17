@@ -46,11 +46,16 @@ def process_image(file_path, generations, mutation_rate):
 def sendMail(): 
     if not validateForm(): # validate the form before submitting the contact form
         return
+    from_name = request.form.get("name")
+    email = request.form.get("email")
+    subject = request.form.get("subject")
+    message = request.form.get("message")
+
     params = {
-        from_name : document.getElementById("name").value, 
-        email : document.getElementById("email").value,
-        subject : document.getElementById("subject").value, 
-        message : document.getElementById("message").value,
+        "form_name": from_name, 
+        "email": email,
+        "subject": subject,
+        "message": message,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", params).then(
         # Redirect to the home page after successfully sending the email
