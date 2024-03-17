@@ -87,7 +87,7 @@ def process():
     return render_template('index.html', original_image=original_image_data, replicated_image=replicated_image_data, generations=generations, mutation_rate=mutation_rate)
 
 # Route to enable users to submit the form from the contact section
-@app.route('/contact', method=['PORT'])
+@app.route('/contact', methods=['PORT'])
 def sendMail(): 
     return redirect(url_for('home')) # redirect to the home page after successful submission
     
