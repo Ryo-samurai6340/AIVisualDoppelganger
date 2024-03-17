@@ -89,7 +89,17 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+    // Send email asynchronously
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
+        // Handle success
+        alert("Your enquiry has been sent successfully!");
+        // Redirect to the home page
+        window.location.href = '/';        
+    }).catch(function(error) {
+        // Handle error
+        alert("An error occurred while sending the email.");
+        console.error(error);
+    });     
 }
 
 // To show scrollup 
