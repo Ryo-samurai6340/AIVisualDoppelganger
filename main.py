@@ -6,8 +6,6 @@ import base64
 import numpy as np
 import logging
 from genetic_algorithm import GeneticAlgorithm
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
 # configure logging
 logging.basicConfig(level=logging.DEBUG)
