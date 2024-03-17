@@ -66,11 +66,16 @@ function validateContactForm() {
     let email = document.getElementById("email").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
+    let submitStatus = document.getElementById('submit-status').value;
 
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
-        // Display error message
-        // alert("Please fill in all fields.");
+        // Color of message status
+        contactMessage.classList.add('color-red');
+
+        // Show error message if there is an empty field
+        contactMessage.textContent = 'Please fill all input fields ⚠️';
+
         return false; // Return false to prevent form submission
     }
     return true; // Return true if all fields are filled
@@ -88,8 +93,11 @@ function sendMail() {
         email : document.getElementById("email").value,
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
+        submitStatus : document.getElementById("submit-status").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+    // Show message if successfully submitted
+    contactMessage.classList.add('color-blue');
+    contactMessage.textContent = 'Your message submitted ✅';
 }
 
 // To show scrollup 
