@@ -231,7 +231,7 @@
 
                 <section class="section" id="contact">
                     <h2>Contact</h2>
-                    <form class="contact-form" action="{{ url_for('sendMail') }}" method="post">
+                    <form class="contact-form" action="/contact" method="post">
                         <label for="name">Name:</label><br>
                         <input type="name" id="name" name="name" required><br>
                         <label for="email">Email:</label><br>
@@ -241,6 +241,9 @@
                         <label for="message">Inquiry: </label><br>
                         <textarea id="message" name="message" placeholder="Report issues, request anything, etc." required></textarea><br>
                         <input class="submit-button" type="submit" value="Submit" onclick="sendMail()">
+                        <div id="confirmationMessage" style="display: none;">
+                            Your enquiry has been submitted successfully!
+                        </div>
                     </form>
                 </section>
             </div>
