@@ -101,9 +101,10 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
-        showAlertMessage("Your enquiry has been sent successfully!");
+        document.getElementById('alert_message').style.display = 'block';
     });
 }
+document.getElementById('submitButton').addEventListener('click', sendMail);
 
 // To show scrollup 
 const scrollUp = () => {
