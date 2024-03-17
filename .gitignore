@@ -24,3 +24,7 @@ build/
 # Ignore system-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore Docker-related files if not needed in version control
+docker-compose.yml
+docker-compose.override.yml
