@@ -89,17 +89,10 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    // Send email asynchronously
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
-        // Handle success
-        alert("Your enquiry has been sent successfully!");
-        // Redirect to the home page
-        window.location.href = '/';        
-    }).catch(function(error) {
-        // Handle error
-        alert("An error occurred while sending the email.");
-        console.error(error);
-    });     
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(() => {
+        // Display confirmation message
+        document.getElementById('confirmationMessage').style.display = 'block';
+    });   
 }
 
 // To show scrollup 
