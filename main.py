@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from PIL import Image
 import os
 import io
@@ -109,7 +109,7 @@ def process():
 def send_mail():
     # Validate the form before sending the email
     if not validateForm():
-        return "Error: Form validation failed", 400
+        return jsonify({'error': 'Form validation failed'}), 400
     
     # Get form data
     name = request.form.get('name')
@@ -124,7 +124,7 @@ def send_mail():
     send_email(sender_email, sender_password, recipient_email, subject, message)
 
     # Return a success message
-    return "Your enquiry has been sent successfully!", 200
+    return jsonify({'message': 'Your enquiry has been sent successfully!'}), 200
 
 # Run the Flask app in debug mode
 if __name__ == '__main__':
