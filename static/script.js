@@ -12,7 +12,7 @@ function validateImage() {
     let image = document.getElementById("image").files[0]; // Get uploaded image file
     if (!image) {
         // Display error message if no image is uploaded
-        // alert("Please upload an image.");
+        alert("Please upload an image.");
         return false; // Return false if no image is uploaded
     }
     return true; // Return true if image is uploaded
@@ -59,17 +59,18 @@ function downloadReplicatedImage() {
     link.click();
 }
 
-// Function to validate input fields of the contact form
-function validateContactForm() {
+// Function to validate input fields
+function validateForm() {
     // Get values of input fields
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
-    let submitStatus = document.getElementById('submit-status').value;
 
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
+        // Display error message
+        alert("Please fill in all fields.");
         return false; // Return false to prevent form submission
     }
     return true; // Return true if all fields are filled
@@ -77,18 +78,18 @@ function validateContactForm() {
 
 // Function to enable users to send message from the contact section
 function sendMail() {
-    // Validate the contact form before sending the email
-    if (!validateContactForm()) {
+    // Validate the form before sending the email
+    if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
+    
     let parms = {
         from_name : document.getElementById("name").value,
         email : document.getElementById("email").value,
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
-        submitStatus : document.getElementById("submit-status").value,
     }
-    document.getElementById("submit-status").display("block"); 
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
 }
 
 // To show scrollup 
