@@ -70,20 +70,9 @@ function validateContactForm() {
 
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
-        // Color of message status
-        contactMessage.classList.add('color-red');
-
-        // Show error message if there is an empty field
-        contactMessage.textContent = 'Please fill all input fields ⚠️';
-
         return false; // Return false to prevent form submission
     }
-    else {
-        // Show message if successfully submitted
-        contactMessage.classList.add('color-blue');
-        contactMessage.textContent = 'Your message submitted ✅';
-        return true; // Return true if all fields are filled
-    }
+    return true; // Return true if all fields are filled
 }
 
 // Function to enable users to send message from the contact section
@@ -92,7 +81,6 @@ function sendMail() {
     if (!validateContactForm()) {
         return; // Exit the function if form validation fails
     }
-    
     let parms = {
         from_name : document.getElementById("name").value,
         email : document.getElementById("email").value,
@@ -100,6 +88,7 @@ function sendMail() {
         message : document.getElementById("message").value,
         submitStatus : document.getElementById("submit-status").value,
     }
+    document.getElementById("submit-status").display("block"); 
 }
 
 // To show scrollup 
