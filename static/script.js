@@ -59,8 +59,8 @@ function downloadReplicatedImage() {
     link.click();
 }
 
-// Function to validate input fields
-function validateForm() {
+// Function to validate input fields of the contact form
+function validateContactForm() {
     // Get values of input fields
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -70,7 +70,7 @@ function validateForm() {
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
         // Display error message
-        alert("Please fill in all fields.");
+        // alert("Please fill in all fields.");
         return false; // Return false to prevent form submission
     }
     return true; // Return true if all fields are filled
@@ -78,8 +78,8 @@ function validateForm() {
 
 // Function to enable users to send message from the contact section
 function sendMail() {
-    // Validate the form before sending the email
-    if (!validateForm()) {
+    // Validate the contact form before sending the email
+    if (!validateContactForm()) {
         return; // Exit the function if form validation fails
     }
     
