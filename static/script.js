@@ -89,10 +89,7 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(() => {
-        // Display confirmation message
-        document.getElementById('confirmationMessage').style.display = 'block';
-    });   
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));  
 }
 
 // To show scrollup 
