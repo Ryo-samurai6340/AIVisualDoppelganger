@@ -5,7 +5,10 @@ import io
 import base64
 import numpy as np
 import logging
+import smtplib
 from genetic_algorithm import GeneticAlgorithm
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -40,6 +43,21 @@ def process_image(file_path, generations, mutation_rate):
     replicated_img = Image.fromarray(decoded_best_individual.astype(np.uint8))
 
     return replicated_img
+
+def send_email(sender_email, sender_password, recipient_email, subject, message):
+    # Set up the email message
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = recipient_email
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+
+    # Connect to the SMTP server
+    with smtplib.SMTP_SSL('smtp.example.com', 465) as smtp:
+        smtp.login(sender_email, sender_password)
+
+        # Send the email
+        smtp.send_message(msg)
 
 # Route for the home page
 @app.route('/')
@@ -85,6 +103,28 @@ def process():
         replicated_image_data = base64.b64encode(output_replicated.getvalue()).decode('utf-8')
 
     return render_template('index.html', original_image=original_image_data, replicated_image=replicated_image_data, generations=generations, mutation_rate=mutation_rate)
+
+# Route to update the send_mail function to use the send_email function
+@app.route('/send-mail', methods=['POST'])
+def send_mail():
+    # Validate the form before sending the email
+    if not validateForm():
+        return "Error: Form validation failed", 400
+    
+    # Get form data
+    name = request.form.get('name')
+    email = request.form.get('email')
+    subject = request.form.get('subject')
+    message = request.form.get('message')
+    
+    # Send the email
+    sender_email = 'your-email@example.com'
+    sender_password = 'your-email-password'
+    recipient_email = 'recipient@example.com'
+    send_email(sender_email, sender_password, recipient_email, subject, message)
+
+    # Return a success message
+    return "Your enquiry has been sent successfully!", 200
 
 # Run the Flask app in debug mode
 if __name__ == '__main__':
