@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_mail import Mail, Message
 from PIL import Image
 import os
 import io
@@ -11,6 +12,16 @@ from genetic_algorithm import GeneticAlgorithm
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)  # create Flask web app
+
+# configure Flask-Mail
+app.config['MAIL_SERVER'] = 'smtp.example.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'your-email@example.com'
+app.config['MAIL_PASSWORD'] = 'your-email-password'
+
+# Initialize Flask-Mail
+mail = Mail(app)
 
 # Set the upload folder for imgs
 UPLOAD_FOLDER = 'uploads'
@@ -88,7 +99,18 @@ def process():
 
 # Route to enable users to submit the form from the contact section
 @app.route('/contact', methods=['PORT'])
-def sendMail(): 
+def sendMail():
+    # Get form data
+    name = request.form['name']
+    email = request.form['email']
+    subject = request.form['subject']
+    message = request.form['message']
+    
+    # Create message object
+    msg = Message(subject, sender=email, recipients=['recipient@example.com'])
+    msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
+    
+    mail.send(msg) # Send email
     return redirect(url_for('home')) # redirect to the home page after successful submission
     
 # Run the Flask app in debug mode
