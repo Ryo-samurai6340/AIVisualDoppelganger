@@ -92,14 +92,6 @@ function sendMail() {
     emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
 }
 
-// Function to handle the click event of the "OK" button
-function dismissSuccessMessage() {
-    // Hide the success message
-    document.getElementById('successMessage').style.display = 'none';
-}
-// Add event listener to the "OK" button
-document.getElementById('okButton').addEventListener('click', dismissSuccessMessage);
-
 // To show scrollup 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
