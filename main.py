@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 from PIL import Image
 import os
 import io
@@ -40,6 +40,21 @@ def process_image(file_path, generations, mutation_rate):
     replicated_img = Image.fromarray(decoded_best_individual.astype(np.uint8))
 
     return replicated_img
+
+# define function to enable users to send message from the contact section
+def sendMail(): 
+    if not validateForm(): # validate the form before submitting the contact form
+        return
+    let parms = {
+        from_name : document.getElementById("name").value, 
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value, 
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(
+        # Redirect to the home page after successfully sending the email
+        redirect('/')
+    )
 
 # Route for the home page
 @app.route('/')
@@ -85,11 +100,6 @@ def process():
         replicated_image_data = base64.b64encode(output_replicated.getvalue()).decode('utf-8')
 
     return render_template('index.html', original_image=original_image_data, replicated_image=replicated_image_data, generations=generations, mutation_rate=mutation_rate)
-
-# Route to enable users to submit the form from the contact section
-@app.route('/contact', methods=['PORT'])
-def sendMail(): 
-    return redirect(url_for('home')) # redirect to the home page after successful submission
     
 # Run the Flask app in debug mode
 if __name__ == '__main__':
