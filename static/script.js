@@ -82,25 +82,14 @@ function sendMail() {
     if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
-
-    // Create a FormData object to send form data to the server
-    let formData = new FormData(document.getElementById('contactForm'));
     
-    // Send form data to the server using fetch API
-    fetch('/send-mail', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Display the success message in an alert
-        alert(data.message);
-    })
-    .catch(error => {
-        // Display an error message if something goes wrong
-        console.error('Error:', error);
-        alert('An error occurred while sending the email.');
-    });
+    let parms = {
+        from_name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value, 
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
 }
 
 // To show scrollup 
