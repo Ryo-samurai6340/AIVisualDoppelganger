@@ -101,7 +101,6 @@ function sendMail() {
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms).then(() => {
         alert("You have submitted the contact form successfully!");
-        window.location.href = "/";
     })
     .catch(function(error) {
         alert("An error occurred while submitting. Please try again later.");
