@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from PIL import Image
+from werkzeug.utils import secure_filename
 import os
 import io
 import base64
@@ -58,6 +59,7 @@ def process():
     if file.filename == '':
         return "No selected file"
 
+    filename = secure_filename(file.filename)
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
     
