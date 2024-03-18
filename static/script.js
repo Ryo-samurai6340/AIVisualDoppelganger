@@ -60,7 +60,7 @@ function downloadReplicatedImage() {
 }
 
 // Function to enable users to send message from the contact section
-function sendMail() {
+function sendMail(event) {
     event.preventDefault(); 
     // Validate the form before sending the email
     if (!validateForm()) {
@@ -74,9 +74,10 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
-        alert("Your enquiry has been sent successfully!");
+        document.getElementById("status-message").textContent = "Your enquiry has been sent successfully!";
     }, function(error) {
-        console.error("Failed to send email. Please try again later."); 
+        console.error("Failed to send email:", error);
+        document.getElementById("status-message").textContent = "Failed to send email."; 
     });
 }
 
@@ -91,7 +92,7 @@ function validateForm() {
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
         // Display error message
-        alert("Please fill in all fields.");
+        document.getElementById("status-message").textContent = "Please fill in all fields.";
         return false; // Return false to prevent form submission
     }
     return true; // Return true if all fields are filled
