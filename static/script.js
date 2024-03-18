@@ -60,7 +60,7 @@ function downloadReplicatedImage() {
 }
 
 // Function to enable users to send message from the contact section
-function sendMail() {
+function sendMail(event) {
     event.preventDefault(); 
     // Validate the form before sending the email
     if (!validateForm()) {
@@ -75,12 +75,13 @@ function sendMail() {
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
         displayStatusMessage("Your enquiry has been sent successfully!", true);
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000); 
     }, function(error) {
         console.error('Failed to send email:', error);
         displayStatusMessage("Failed to send email. Please try again later.", false);
+    }).finally(function() {
+        setTimeout(function() {
+            window.location.reload();
+        }, 3000);
     });
 }
 
