@@ -118,3 +118,18 @@ const scrollUp = () => {
                         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp);
+
+
+// Function to handle tap event on the replicate button 
+function handleReplicateTap() {
+    showLoadingSpinner(); 
+}
+// Function to handle tap event on the download button 
+function handleDownloadTap() {
+    downloadReplicatedImage();
+}
+// initliaze Hammer.js on the replicate button and download button
+var replicateButtonHammer = new Hammer(document.getElementById('replicateButton')); 
+replicateButtonHammer.on('tap', handleReplicateTap); // handle tap gesture on the replicate button
+var downloadButtonHammer = new Hammer(document.getElementById('downloadButton')); 
+downloadButtonHammer.on('tap', handleDownloadTap); // handle tap gesture on the download button
