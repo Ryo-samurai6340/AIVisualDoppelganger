@@ -46,8 +46,6 @@ def home():
 def contact():
     if request.method == 'POST':
         return redirect(url_for('home'))
-    else:
-        return "<script>alert('Submission failed. Please try again.');</script>"
         
     return render_template('index.html')
 
