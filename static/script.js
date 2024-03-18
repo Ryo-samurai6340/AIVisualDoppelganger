@@ -61,6 +61,9 @@ function downloadReplicatedImage() {
     link.download = 'replicated_image.png';
     link.click();
 }
+document.getElementById('downloadButton').addEventListener('touchstart', function(event) {
+    downloadReplicatedImage();
+});
 
 // Function to validate input fields
 function validateForm() {
