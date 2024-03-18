@@ -59,25 +59,9 @@ function downloadReplicatedImage() {
     link.click();
 }
 
-// Function to validate input fields
-function validateForm() {
-    // Get values of input fields
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let subject = document.getElementById("subject").value;
-    let message = document.getElementById("message").value;
-
-    // Check if any input field is empty
-    if (name === "" || email === "" || subject === "" || message === "") {
-        // Display error message
-        alert("Please fill in all fields.");
-        return false; // Return false to prevent form submission
-    }
-    return true; // Return true if all fields are filled
-}
-
 // Function to enable users to send message from the contact section
 function sendMail() {
+    event.preventDefault(); 
     // Validate the form before sending the email
     if (!validateForm()) {
         return; // Exit the function if form validation fails
@@ -89,8 +73,40 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
+        displayStatusMessage("Your enquiry has been sent successfully!", true);
+        setTimeout(function() {
+            window.location.reload();
+        }, 3000); 
+    }, function(error) {
+        console.error('Failed to send email:', error);
+        displayStatusMessage("Failed to send email. Please try again later.", false);
+    });
 }
+
+function displayStatusMessage(message, success) {
+    let statusMessageElement = document.getElementById("status-message");
+    statusMessageElement.textContent = message;
+    statusMessageElement.style.color = success ? "green" : "red";
+}
+
+// Function to validate input fields
+function validateForm() {
+    // Get values of input fields
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    // Check if any input field is empty
+    if (name === "" || email === "" || subject === "" || message === "") {
+        // Display error message
+        displayStatusMessage("Please fill in all fields.", false);
+        return false; // Return false to prevent form submission
+    }
+    return true; // Return true if all fields are filled
+}
+document.getElementById("contact-form").addEventListener("submit", sendMail);
 
 // To show scrollup 
 const scrollUp = () => {
