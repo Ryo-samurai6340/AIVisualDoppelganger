@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from PIL import Image
 from werkzeug.utils import secure_filename
 import os
@@ -43,7 +43,10 @@ def home():
     return render_template('index.html')
 
 @app.route('/contact', methods=['POST'])
-def contact(): 
+def contact():
+    if request.method == 'POST':
+        return redirect(url_for('home'))
+        
     return render_template('index.html')
 
 # Route to handle form submission and process the img
