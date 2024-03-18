@@ -46,6 +46,10 @@ def process_image(file_path, generations, mutation_rate):
 def home():
     return render_template('index.html')
 
+@app.route('/contact', methods=['POST'])
+def contact(): 
+    return render_template('index.html')
+
 # Route to handle form submission and process the img
 @app.route('/process', methods=['POST'])
 def process():
