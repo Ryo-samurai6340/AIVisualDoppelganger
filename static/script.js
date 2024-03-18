@@ -25,6 +25,9 @@ function showLoadingSpinner() {
     }
     document.getElementById('loadingSpinner').style.display = 'block';
 }
+document.getElementById('replicateButton').addEventListener('touchstart', function(event) {
+    showLoadingSpinner();
+});
 
 // Function to hide the loading spinner
 function hideLoadingSpinner() {
