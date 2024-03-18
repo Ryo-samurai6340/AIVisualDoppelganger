@@ -76,13 +76,23 @@ function validateForm() {
     return true; // Return true if all fields are filled
 }
 
+// Function to validate email address
+function validateEmail(email) {
+    const emailRegularExpression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegularExpression.test(email); 
+}
+
 // Function to enable users to send message from the contact section
 function sendMail() {
     // Validate the form before sending the email
     if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
-    
+    let email = document.getElementById("email").vlaue; 
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address."); 
+        return; 
+    }
     let parms = {
         from_name : document.getElementById("name").value,
         email : document.getElementById("email").value,
