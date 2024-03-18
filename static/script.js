@@ -59,38 +59,6 @@ function downloadReplicatedImage() {
     link.click();
 }
 
-// Function to enable users to send message from the contact section
-function sendMail(event) {
-    event.preventDefault(); 
-    // Validate the form before sending the email
-    if (!validateForm()) {
-        return; // Exit the function if form validation fails
-    }
-    
-    let parms = {
-        from_name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        subject : document.getElementById("subject").value, 
-        message : document.getElementById("message").value,
-    }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
-        displayStatusMessage("Your enquiry has been sent successfully!", true);
-    }, function(error) {
-        console.error('Failed to send email:', error);
-        displayStatusMessage("Failed to send email. Please try again later.", false);
-    }).finally(function() {
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000);
-    });
-}
-
-function displayStatusMessage(message, success) {
-    let statusMessageElement = document.getElementById("status-message");
-    statusMessageElement.textContent = message;
-    statusMessageElement.style.color = success ? "green" : "red";
-}
-
 // Function to validate input fields
 function validateForm() {
     // Get values of input fields
@@ -102,12 +70,27 @@ function validateForm() {
     // Check if any input field is empty
     if (name === "" || email === "" || subject === "" || message === "") {
         // Display error message
-        displayStatusMessage("Please fill in all fields.", false);
+        alert("Please fill in all fields.");
         return false; // Return false to prevent form submission
     }
     return true; // Return true if all fields are filled
 }
-document.getElementById("contact-form").addEventListener("submit", sendMail);
+
+// Function to enable users to send message from the contact section
+function sendMail() {
+    // Validate the form before sending the email
+    if (!validateForm()) {
+        return; // Exit the function if form validation fails
+    }
+    
+    let parms = {
+        from_name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value, 
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+}
 
 // To show scrollup 
 const scrollUp = () => {
