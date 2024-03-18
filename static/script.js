@@ -99,7 +99,11 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
+        alert("You have submitted the contact form successfully!"); 
+    }, function(error) {
+        alert("An error occurred while submitting. Please try again later.");
+    });
 }
 
 // To show scrollup 
