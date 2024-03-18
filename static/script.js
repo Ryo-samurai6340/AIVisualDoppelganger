@@ -99,12 +99,7 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(() => {
-        alert("You have submitted the contact form successfully!");
-    })
-    .catch(function(error) {
-        alert("An error occurred while submitting. Please try again later.");
-    });
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
 }
 
 // To show scrollup 
