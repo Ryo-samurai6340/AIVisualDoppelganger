@@ -84,10 +84,10 @@ function validateEmail(email) {
 
 // Function to enable users to send message from the contact section
 function sendMail() {
-    if (window.location.pathname.endsWith('/contact')) {
-        alert("Your submission failed. Please ensure that the page link doesn't end with \"/contact\" before attempting to submit again.");
-        return;
-    }
+    // if (window.location.pathname.endsWith('/contact')) {
+    //     alert("Your submission failed. Please ensure that the page link doesn't end with \"/contact\" before attempting to submit again.");
+    //     return;
+    // }
     // Validate the form before sending the email
     if (!validateForm()) {
         return; // Exit the function if form validation fails
