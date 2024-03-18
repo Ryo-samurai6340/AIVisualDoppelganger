@@ -99,25 +99,7 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    fetch('/contact', {
-        method: 'POST',
-        body: JSON.stringify(parms),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            alert("You have submitted the contact form successfully!");
-        } else {
-            alert("Submission failed. Please try again.");
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("An error occurred while submitting. Please try again later.");
-    });
-    // emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
 }
 
 // To show scrollup 
