@@ -95,7 +95,7 @@ function sendMail() {
     }
     let parms = {
         from_name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
+        email : email,
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
