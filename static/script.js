@@ -25,9 +25,9 @@ function showLoadingSpinner() {
     }
     document.getElementById('loadingSpinner').style.display = 'block';
 }
-document.getElementById('replicateButton').addEventListener('touchstart', function(event) {
-    showLoadingSpinner();
-});
+// document.getElementById('replicateButton').addEventListener('touchstart', function(event) {
+//     showLoadingSpinner();
+// });
 
 // Function to hide the loading spinner
 function hideLoadingSpinner() {
@@ -61,9 +61,9 @@ function downloadReplicatedImage() {
     link.download = 'replicated_image.png';
     link.click();
 }
-document.getElementById('downloadButton').addEventListener('touchstart', function(event) {
-    downloadReplicatedImage();
-});
+// document.getElementById('downloadButton').addEventListener('touchstart', function(event) {
+//     downloadReplicatedImage();
+// });
 
 // Function to validate input fields
 function validateForm() {
@@ -124,15 +124,15 @@ window.addEventListener('scroll', scrollUp);
 
 
 // Function to handle tap event on the replicate button 
-function handleReplicateTap() {
-    showLoadingSpinner(); 
-}
-// Function to handle tap event on the download button 
-function handleDownloadTap() {
-    downloadReplicatedImage();
-}
-// initliaze Hammer.js on the replicate button and download button
-var replicateButtonHammer = new Hammer(document.getElementById('replicateButton')); 
-replicateButtonHammer.on('tap', handleReplicateTap); // handle tap gesture on the replicate button
-var downloadButtonHammer = new Hammer(document.getElementById('downloadButton')); 
-downloadButtonHammer.on('tap', handleDownloadTap); // handle tap gesture on the download button
+// function handleReplicateTap() {
+//     showLoadingSpinner(); 
+// }
+// // Function to handle tap event on the download button 
+// function handleDownloadTap() {
+//     downloadReplicatedImage();
+// }
+// // initliaze Hammer.js on the replicate button and download button
+// var replicateButtonHammer = new Hammer(document.getElementById('replicateButton')); 
+// replicateButtonHammer.on('tap', handleReplicateTap); // handle tap gesture on the replicate button
+// var downloadButtonHammer = new Hammer(document.getElementById('downloadButton')); 
+// downloadButtonHammer.on('tap', handleDownloadTap); // handle tap gesture on the download button
