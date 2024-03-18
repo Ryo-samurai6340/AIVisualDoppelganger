@@ -75,28 +75,21 @@ function validateForm() {
     }
     return true; // Return true if all fields are filled
 }
-document.getElementById("contact-form").addEventListener("submit", sendMail);
 
 // Function to enable users to send message from the contact section
 function sendMail() {
-    event.preventDefault(); 
-    
     // Validate the form before sending the email
     if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
+    
     let parms = {
         from_name : document.getElementById("name").value,
         email : document.getElementById("email").value,
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
-        alert("Your enquiry has been sent successfully!");
-    }, function(error) {
-        console.error("Failed to send email: ', error); 
-        alert("Failed to send email. Please try again later."); 
-    }); 
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
 }
 
 // To show scrollup 
