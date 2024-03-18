@@ -88,7 +88,7 @@ function sendMail() {
     if (!validateForm()) {
         return; // Exit the function if form validation fails
     }
-    let email = document.getElementById("email").vlaue; 
+    let email = document.getElementById("email").value; 
     if (!validateEmail(email)) {
         alert("Please enter a valid email address."); 
         return; 
