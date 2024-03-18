@@ -59,6 +59,27 @@ function downloadReplicatedImage() {
     link.click();
 }
 
+// Function to enable users to send message from the contact section
+function sendMail() {
+    event.preventDefault(); 
+    // Validate the form before sending the email
+    if (!validateForm()) {
+        return; // Exit the function if form validation fails
+    }
+    
+    let parms = {
+        from_name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value, 
+        message : document.getElementById("message").value,
+    }
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function() {
+        alert("Your enquiry has been sent successfully!");
+    }, function(error) {
+        console.error("Failed to send email. Please try again later."); 
+    });
+}
+
 // Function to validate input fields
 function validateForm() {
     // Get values of input fields
@@ -75,22 +96,7 @@ function validateForm() {
     }
     return true; // Return true if all fields are filled
 }
-
-// Function to enable users to send message from the contact section
-function sendMail() {
-    // Validate the form before sending the email
-    if (!validateForm()) {
-        return; // Exit the function if form validation fails
-    }
-    
-    let parms = {
-        from_name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        subject : document.getElementById("subject").value, 
-        message : document.getElementById("message").value,
-    }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("Your enquiry has been sent successfully!"));
-}
+document.getElementById("contact-form").addEventListener("submit", sendMail); 
 
 // To show scrollup 
 const scrollUp = () => {
