@@ -85,7 +85,7 @@ function validateEmail(email) {
 // Function to enable users to send message from the contact section
 function sendMail() {
     if (window.location.pathname.endsWith('/contact')) {
-        alert("Submission failed. Please try again.");
+        alert("Your submission failed. Please ensure that the page link doesn't end with \"/contact\" before attempting to submit again.");
         return;
     }
     // Validate the form before sending the email
