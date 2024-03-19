@@ -37,7 +37,11 @@ function handleFormSubmission(event) {
     this.submit();
 }
 document.querySelector('.uploadImage-form').addEventListener('submit', handleFormSubmission);
-
+document.getElementById('replicateButton').addEventListener('click', function(event) {
+    event.preventDefault();
+    showLoadingSpinner();
+    document.querySelector('.uploadImage-form').submit();
+});
 
 // Function to enable/disable download button based on image availability
 function toggleDownloadButton(enabled) {
@@ -111,15 +115,7 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
-        alert("You have submitted the contact form successfully!");
-        setTimeout(function() {
-            window.location.href = '/';
-        }, 3000);
-    }, function(error) {
-        console.log('FAILED...', error);
-        alert("Failed to submit the contact form. Please try again later.");
-    });
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
 }
 
 // To show scrollup 
