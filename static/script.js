@@ -25,14 +25,19 @@ function showLoadingSpinner() {
     }
     document.getElementById('loadingSpinner').style.display = 'block';
 }
-// document.getElementById('replicateButton').addEventListener('touchstart', function(event) {
-//     showLoadingSpinner();
-// });
 
 // Function to hide the loading spinner
 function hideLoadingSpinner() {
     document.getElementById('loadingSpinner').style.display = 'none';
 }
+
+function handleFormSubmission(event) {
+    event.preventDefault();
+    showLoadingSpinner();
+    this.submit();
+}
+document.querySelector('.uploadImage-form').addEventListener('submit', handleFormSubmission);
+
 
 // Function to enable/disable download button based on image availability
 function toggleDownloadButton(enabled) {
@@ -61,9 +66,6 @@ function downloadReplicatedImage() {
     link.download = 'replicated_image.png';
     link.click();
 }
-// document.getElementById('downloadButton').addEventListener('touchstart', function(event) {
-//     downloadReplicatedImage();
-// });
 
 // Function to validate input fields
 function validateForm() {
@@ -109,7 +111,15 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
+        alert("You have submitted the contact form successfully!");
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 3000);
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert("Failed to submit the contact form. Please try again later.");
+    });
 }
 
 // To show scrollup 
@@ -121,18 +131,3 @@ const scrollUp = () => {
                         : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp);
-
-
-// Function to handle tap event on the replicate button 
-// function handleReplicateTap() {
-//     showLoadingSpinner(); 
-// }
-// // Function to handle tap event on the download button 
-// function handleDownloadTap() {
-//     downloadReplicatedImage();
-// }
-// // initliaze Hammer.js on the replicate button and download button
-// var replicateButtonHammer = new Hammer(document.getElementById('replicateButton')); 
-// replicateButtonHammer.on('tap', handleReplicateTap); // handle tap gesture on the replicate button
-// var downloadButtonHammer = new Hammer(document.getElementById('downloadButton')); 
-// downloadButtonHammer.on('tap', handleDownloadTap); // handle tap gesture on the download button
