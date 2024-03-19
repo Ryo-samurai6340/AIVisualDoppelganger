@@ -104,12 +104,7 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms)
-        .then(alert("Your inquiry has been submitted successfully! However,\
-                    please note that if you submitted from iOS devices or did\
-                    not receive an auto-reply after the submission, it is likely\
-                    that your submission has failed. Please try again from other\
-                    operating systems to ensure the successful completion of your\
-                    submission."));
+        .then(alert("You submitted the inquiry successfully! However, please note that if you submitted from iOS devices or did not receive an auto-reply after submission, it is likely that your submission has failed. Please try again from other operating systems to ensure the successful completion of your submission."));
 }
 
 // To show scrollup 
