@@ -31,18 +31,6 @@ function hideLoadingSpinner() {
     document.getElementById('loadingSpinner').style.display = 'none';
 }
 
-function handleFormSubmission(event) {
-    event.preventDefault();
-    showLoadingSpinner();
-    this.submit();
-}
-document.querySelector('.uploadImage-form').addEventListener('submit', handleFormSubmission);
-document.getElementById('replicateButton').addEventListener('click', function(event) {
-    event.preventDefault();
-    showLoadingSpinner();
-    document.querySelector('.uploadImage-form').submit();
-});
-
 // Function to enable/disable download button based on image availability
 function toggleDownloadButton(enabled) {
     var downloadButton = document.getElementById('downloadButton');
