@@ -109,13 +109,8 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(function(response) {
-        alert("You have submitted the contact form successfully!");
-        window.location.href = '/'; 
-    }, function(error) {
-        console.log('FAILED...', error);
-        alert("Failed to submit the contact form. Please try again later.");
-    });}
+    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
+}
 
 // To show scrollup 
 const scrollUp = () => {
