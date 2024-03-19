@@ -42,12 +42,12 @@ def process_image(file_path, generations, mutation_rate):
 def home():
     return render_template('index.html')
 
-# @app.route('/contact', methods=['POST'])
-# def contact():
-#     if request.method == 'POST':
-#         return redirect(url_for('home'))
+@app.route('/contact', methods=['POST'])
+def contact():
+    if request.method == 'POST':
+        return redirect(url_for('home'))
         
-#     return render_template('index.html')
+    return render_template('index.html')
 
 # Route to handle form submission and process the img
 @app.route('/process', methods=['POST'])
@@ -74,25 +74,21 @@ def process():
     # Set the number of generations and mutation rate
     generations = 1
     mutation_rate = 0.01
-    # img = Image.open(file_path)  # Open the uploaded img using Pillow
+    img = Image.open(file_path)  # Open the uploaded img using Pillow
 
     # Process the uploaded image using the genetic algo
     replicated_image = process_image(file_path, generations, mutation_rate)
 
-    # Save the replicated image to a file
-    replicated_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'replicated_' + filename)
-    replicated_image.save(replicated_image_path)
-
     # Display the original and replicated imgs in the browser
-    # with io.BytesIO() as output_original, io.BytesIO() as output_replicated:
-    #     img.save(output_original, format="PNG")
-    #     replicated_image.save(output_replicated, format="PNG")
+    with io.BytesIO() as output_original, io.BytesIO() as output_replicated:
+        img.save(output_original, format="PNG")
+        replicated_image.save(output_replicated, format="PNG")
 
-    #     # convert img data to base64 for rendering in HTML 
-    #     original_image_data = base64.b64encode(output_original.getvalue()).decode('utf-8')
-    #     replicated_image_data = base64.b64encode(output_replicated.getvalue()).decode('utf-8')
+        # convert img data to base64 for rendering in HTML 
+        original_image_data = base64.b64encode(output_original.getvalue()).decode('utf-8')
+        replicated_image_data = base64.b64encode(output_replicated.getvalue()).decode('utf-8')
 
-    return render_template('index.html', replicated_image_path=replicated_image_path)
+    return render_template('index.html', original_image=original_image_data, replicated_image=replicated_image_data, generations=generations, mutation_rate=mutation_rate)
     
 # Run the Flask app in debug mode
 if __name__ == '__main__':
