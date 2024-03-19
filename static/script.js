@@ -103,7 +103,13 @@ function sendMail() {
         subject : document.getElementById("subject").value, 
         message : document.getElementById("message").value,
     }
-    emailjs.send("service_txmsajv", "template_li27qnr", parms).then(alert("You have submitted the contact form successfully!"));
+    emailjs.send("service_txmsajv", "template_li27qnr", parms)
+        .then(alert("Your inquiry has been submitted successfully! \nHowever, 
+                    please note that if you submitted from iOS devices or did 
+                    not receive an auto-reply right after the submission, it is 
+                    likely that your submission has failed. Please try again from
+                    other operating systems to ensure the successful completion of 
+                    your submission."));
 }
 
 // To show scrollup 
