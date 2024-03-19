@@ -38,9 +38,9 @@ def process_image(file_path, generations, mutation_rate):
     return replicated_img
 
 # Route for the home page
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 # @app.route('/contact', methods=['POST'])
 # def contact():
