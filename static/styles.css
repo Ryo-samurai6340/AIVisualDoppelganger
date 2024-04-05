@@ -893,7 +893,7 @@ dd {
     }
 }
 
-/* Desktop size */
+/* Desktop full screen size */
 @media (min-height: 900px) and (min-width: 1900px) {
     .preloader_text {
         top: 78%; 
@@ -903,12 +903,32 @@ dd {
     }
 }
 
-/* Larger desktop like iMac size */
-@media (min-height: 1300px) and (min-width: 2500px) {
+/* Desktop half screen size */
+@media (min-height: 900px) and (min-width: 900px) {
     .preloader_text {
-        top: 72%; 
+        top: 58%; 
     }
     .spinner_text {
-        top: 27%; 
+        top: 23%; 
+    }
+}
+
+/* Larger desktop (iMac) full screen size */
+@media (min-height: 1300px) and (min-width: 2500px) {
+    .preloader_text {
+        top: 71%; 
+    }
+    .spinner_text {
+        top: 26%; 
+    }
+}
+
+/* Larger desktop (iMac) default window tap size */
+@media (min-height: 1100px) and (min-width: 1200px) {
+    .preloader_text {
+        top: 50%; 
+    }
+    .spinner_text {
+        top: 15%; 
     }
 }
