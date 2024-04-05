@@ -893,8 +893,8 @@ dd {
     }
 }
 
-/* Desktop size */
-@media (min-height: 1400px) and (min-width: 2500px) {
+/* Desktop size (basically for 2560x1440) */
+@media (min-height: 1300px) and (min-width: 2500px) {
     .preloader_text {
         top: 69%; 
     }
