@@ -906,9 +906,9 @@ dd {
 /* Larger desktop like iMac size */
 @media (min-height: 1300px) and (min-width: 2500px) {
     .preloader_text {
-        top: 67%; 
+        top: 72%; 
     }
     .spinner_text {
-        top: 17%; 
+        top: 27%; 
     }
 }
