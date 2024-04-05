@@ -902,3 +902,13 @@ dd {
         top: 37%; 
     }
 }
+
+/* Larger desktop like iMac size */
+@media (min-height: 1300px) and (min-width: 2500px) {
+    .preloader_text {
+        top: 67%; 
+    }
+    .spinner_text {
+        top: 17%; 
+    }
+}
