@@ -760,36 +760,43 @@ dd {
 }
 
 /*********** Responsive to adjust the location of text *********/
-/* iPhone series and vertical screen */ 
+/* iPhone SE series and vertical screen */ 
 @media screen and (min-height: 500px) and (min-width: 300px) {
     .preloader_text {
         top: 97%; 
     }
 }
-/* iPhone series and horizontal screen */
+/* iPhone SE series and horizontal screen */
 @media screen and (min-width: 500px) and (min-height: 300px) {
     .preloader_text {
         top: 103%; 
     }
 }
 
-/* iPhone Plus series and vertical screen */
+/* iPhone series and vertical screen */
 @media screen and (min-height: 600px) and (min-width: 300px) {
     .preloader_text {
         top: 90%; 
     }
 }
-/* iPhone Plus series and horizontal screen */
+/* iPhone series and horizontal screen */
 @media screen and (min-width: 600px) and (min-height: 300px) {
     .preloader_text {
         top: 105%; 
     }
 }
 
+/* iPhone Pro series and vertical screen */
+@media screen and (min-height: 700px) and (min-width: 400px) {
+    .preloader_text {
+        top: 87%; 
+    }
+}
+
 /* iPhone X size and vertical screen */
 @media screen and (min-height: 800px) and (min-width: 300px) {
     .preloader_text {
-        top: 86%; 
+        top: 84%; 
     }
 }
 /* iPhone X size and horizontal screen */
