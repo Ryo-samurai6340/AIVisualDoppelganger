@@ -896,9 +896,9 @@ dd {
 /* Desktop size */
 @media (min-height: 900px) and (min-width: 1900px) {
     .preloader_text {
-        top: 57%; 
+        top: 60%; 
     }
     .spinner_text {
-        top: 7%; 
+        top: 10%; 
     }
 }
