@@ -895,3 +895,13 @@ dd {
         top: 18%; 
     }
 }
+
+/* Desktop size */
+@media (min-height: 1400px) and (min-width: 2500px) {
+    .preloader_text {
+        top: 69%; 
+    }
+    .spinner_text {
+        top: 23%; 
+    }
+}
