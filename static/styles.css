@@ -254,6 +254,11 @@ img {
     margin-top: 30px;
 }
 
+.faq_content {
+    display: flex;
+    justify-content: center;
+}
+
 dl {
     padding: 0 250px 0 250px;
     text-align: left;
