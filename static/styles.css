@@ -906,10 +906,10 @@ dd {
 /* Desktop half screen size */
 @media (min-height: 900px) and (min-width: 900px) {
     .preloader_text {
-        top: 58%; 
+        top: 78%; 
     }
     .spinner_text {
-        top: 23%; 
+        top: 37%; 
     }
 }
 
@@ -926,9 +926,9 @@ dd {
 /* Larger desktop (iMac) default window tap size */
 @media (min-height: 1100px) and (min-width: 1200px) {
     .preloader_text {
-        top: 50%; 
+        top: 71%; 
     }
     .spinner_text {
-        top: 15%; 
+        top: 26%; 
     }
 }
