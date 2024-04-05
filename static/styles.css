@@ -70,13 +70,13 @@ img {
     display: none;
 }
 
-#preloader img {
+/* #preloader img {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-}
+} */
 
 /**************************** Header ******************************/
 .header {
@@ -349,7 +349,7 @@ dd {
     }
 }
 
-.text {
+.spinner_text {
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -359,11 +359,11 @@ dd {
     animation: animateText 2s ease-in-out infinite; 
     animation-delay: -1s;
 }
-@media screen and (min-height: 696px) and (max-height: 955px) {
+/* @media screen and (min-height: 696px) and (max-height: 955px) {
     .text {
         top: 38%; 
     }
-}
+} */
 @keyframes animateText {
     0%, 50% {
         background-color: none; 
@@ -747,12 +747,7 @@ dd {
     animation: animateText 2s ease-in-out infinite; 
     animation-delay: -1s;
 }
-/* Responsive to adjust the location of text (loading) in desktop */
-@media screen and (min-height: 696px) and (max-height: 955px) {
-    .preloader_text {
-        top: 79%; 
-    }
-}
+
 @keyframes animateText {
     0%, 50% {
         background-color: none; 
@@ -761,5 +756,97 @@ dd {
     50.1%, 100% {
         text-shadow: 0 0 5px #0f0, 
                     0 0 15px #0f0;
+    }
+}
+
+/*********** Responsive to adjust the location of text *********/
+/* iPhone series and vertical screen */ 
+@media screen and (min-height: 500px) and (min-width: 300px) {
+    .preloader_text {
+        top: 97%; 
+    }
+}
+/* iPhone series and horizontal screen */
+@media screen and (min-width: 500px) and (min-height: 300px) {
+    .preloader_text {
+        top: 103%; 
+    }
+}
+
+/* iPhone Plus series and vertical screen */
+@media screen and (min-height: 600px) and (min-width: 300px) {
+    .preloader_text {
+        top: 90%; 
+    }
+}
+/* iPhone Plus series and horizontal screen */
+@media screen and (min-width: 600px) and (min-height: 300px) {
+    .preloader_text {
+        top: 105%; 
+    }
+}
+
+/* iPhone X size and vertical screen */
+@media screen and (min-height: 800px) and (min-width: 300px) {
+    .preloader_text {
+        top: 86%; 
+    }
+}
+/* iPhone X size and horizontal screen */
+@media screen and (min-width: 800px) and (min-height: 300px) {
+    .preloader_text {
+        top: 105%; 
+    }
+}
+
+/* Small Table size and vertical screen */
+@media screen and (min-height: 800px) and (min-width: 600px) {
+    .preloader_text {
+        top: 84%; 
+    }
+}
+/* Small Table size and horizontal screen */
+@media screen and (min-width: 800px) and (min-height: 600px) {
+    .preloader_text {
+        top: 95%; 
+    }
+}
+
+/* iPad series and vertical screen */
+@media screen and (min-height: 1000px) and (min-width: 700px) {
+    .preloader_text {
+        top: 77%; 
+    }
+}
+/* iPad series and horizontal screen */
+@media screen and (min-width: 1000px) and (min-height: 700px) {
+    .preloader_text {
+        top: 85%; 
+    }
+}
+
+/* iPad Pro series and vertical screen */
+@media screen and (min-height: 1300px) and (min-width: 1000px) {
+    .preloader_text {
+        top: 70%; 
+    }
+}
+/* iPad Pro series and horizontal screen */
+@media screen and (min-width: 1300px) and (min-height: 1000px) {
+    .preloader_text {
+        top: 77%; 
+    }
+}
+
+/* Laptop size and vertical screen */
+@media (min-height: 1000px) and (min-width: 1900px) {
+    .preloader_text {
+        top: 75%; 
+    }
+}
+/* Laptop size and horizontal screen */
+@media (min-width: 1000px) and (min-height: 1900px) {
+    .preloader_text {
+        top: 64%; 
     }
 }
