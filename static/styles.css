@@ -896,7 +896,7 @@ dd {
 /* Desktop size */
 @media (min-height: 900px) and (min-width: 1900px) {
     .preloader_text {
-        top: 470%; 
+        top: 75%; 
     }
     .spinner_text {
         top: 37%; 
