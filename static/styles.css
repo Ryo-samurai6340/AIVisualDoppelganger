@@ -284,6 +284,7 @@ dd {
 
 .contact-form input {
     margin-bottom: 15px;
+    border-radius: 7px;
 }
 
 .contact-form textarea {
@@ -291,6 +292,7 @@ dd {
     width: 500px;
     resize: none;
     font-family: sans-serif;
+    border-radius: 5px;
 }
 
 .contact-form input:hover, 
