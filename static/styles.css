@@ -921,14 +921,14 @@ dd {
 }
 
 /* MacBook series and its default window size (generally 1440x678) */
-/* @media screen and (min-width: 1400px) and (min-height: 600px) {
+@media screen and (min-width: 1400px) and (min-height: 600px) {
     .preloader_text {
         top: 88% !important; 
     }
     .spinner_text {
         top: 50% !important; 
     }
-} */
+}
 
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media screen and (min-width: 2500px) and (min-height: 1300px) {
