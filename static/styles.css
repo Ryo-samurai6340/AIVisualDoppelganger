@@ -308,7 +308,7 @@ dd {
     min-height: 50vh;
     position: relative; 
     width: 250px; 
-    height: 250px; 
+    height: 290px; 
     animation: animateBackgroundColor 10s linear infinite;
 }
 @keyframes animateBackgroundColor {
@@ -334,7 +334,6 @@ dd {
 }
 @keyframes animate {
     0%, 50% {
-        /* background-color: none;  */
         box-shadow: none;
     }
     50.1%, 100% {
@@ -349,10 +348,10 @@ dd {
 
 .spinner_text {
     position: absolute; 
-    top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 115%);
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
     animation: animateText 2s ease-in-out infinite; 
     animation-delay: -1s;
@@ -717,7 +716,6 @@ dd {
 }
 @keyframes animate {
     0%, 50% {
-        /* background-color: none;  */
         box-shadow: none;
     }
     50.1%, 100% {
@@ -736,6 +734,7 @@ dd {
     left: 50%; 
     transform: translate(-50%, -50%);
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
     animation: animateText 2s ease-in-out infinite; 
     animation-delay: -1s;
@@ -754,192 +753,192 @@ dd {
 
 /*********** Responsive to adjust the position of spinner text *********/
 /* iPhone 5/SE series and vertical screen */ 
-@media screen and (min-width: 300px) and (min-height: 500px) {
+/* @media screen and (min-width: 300px) and (min-height: 500px) {
     .preloader_text {
         top: 97%; 
     }
     .spinner_text {
         top: 60%; 
     }
-}
+} */
 /* iPhone 5/SE series and horizontal screen */
-@media screen and (min-width: 500px) and (min-height: 300px) {
+/* @media screen and (min-width: 500px) and (min-height: 300px) {
     .preloader_text {
         top: 103%; 
     }
     .spinner_text {
         top: 67%; 
     }
-}
+} */
 
 /* iPhone 6/7/8 series and vertical screen */
-@media screen and (min-width: 300px) and (min-height: 600px) {
+/* @media screen and (min-width: 300px) and (min-height: 600px) {
     .preloader_text {
         top: 90%; 
     }
     .spinner_text {
         top: 52%; 
     }
-}
+} */
 /* iPhone 6/7/8 series and horizontal screen */
-@media screen and (min-width: 600px) and (min-height: 300px) {
+/* @media screen and (min-width: 600px) and (min-height: 300px) {
     .preloader_text {
         top: 105%; 
     }
-}
+} */
 
 /* iPhone Pro series and vertical screen */
-@media screen and (min-width: 400px) and (min-height: 700px) {
+/* @media screen and (min-width: 400px) and (min-height: 700px) {
     .preloader_text {
         top: 87%; 
     }
     .spinner_text {
         top: 47%; 
     }
-}
+} */
 
 /* iPhone X/12-15 series and vertical screen */
-@media screen and (min-width: 300px) and (min-height: 800px) {
+/* @media screen and (min-width: 300px) and (min-height: 800px) {
     .preloader_text {
         top: 84%; 
     }
     .spinner_text {
         top: 42%; 
     }
-}
+} */
 /* iPhone X/12-15 series and horizontal screen */
-@media screen and (min-width: 800px) and (min-height: 300px) {
+/* @media screen and (min-width: 800px) and (min-height: 300px) {
     .preloader_text {
         top: 105%; 
     }
-}
+} */
 
 /* Small Table size and vertical screen */
-@media screen and (min-width: 600px) and (min-height: 800px) {
+/* @media screen and (min-width: 600px) and (min-height: 800px) {
     .preloader_text {
         top: 84%; 
     }
-}
+} */
 /* Small Table size and horizontal screen */
-@media screen and (min-width: 800px) and (min-height: 600px) {
+/* @media screen and (min-width: 800px) and (min-height: 600px) {
     .preloader_text {
         top: 95%; 
     }
     .spinner_text {
         top: 56%; 
     }
-}
+} */
 
 /* iPad series and vertical screen */
-@media screen and (min-width: 700px) and (min-height: 1000px) {
+/* @media screen and (min-width: 700px) and (min-height: 1000px) {
     .preloader_text {
         top: 77%; 
     }
     .spinner_text {
         top: 33%; 
     }
-}
+} */
 /* iPad series and horizontal screen */
-@media screen and (min-width: 1000px) and (min-height: 700px) {
+/* @media screen and (min-width: 1000px) and (min-height: 700px) {
     .preloader_text {
         top: 85%; 
     }
     .spinner_text {
         top: 45%; 
     }
-}
+} */
 
 /* iPad Pro series and vertical screen */
-@media screen and (min-width: 1000px) and (min-height: 1300px) {
+/* @media screen and (min-width: 1000px) and (min-height: 1300px) {
     .preloader_text {
         top: 70% !important; 
     }
     .spinner_text {
         top: 25% !important; 
     }
-}
+} */
 /* iPad Pro series and horizontal screen */
-@media screen and (min-width: 1300px) and (min-height: 1000px) {
+/* @media screen and (min-width: 1300px) and (min-height: 1000px) {
     .preloader_text {
         top: 77%; 
     }
     .spinner_text {
         top: 33% !important; 
     }
-}
+} */
 
 /* Laptop size and vertical screen (generally 1920x1080) */
-@media screen and (min-width: 1900px) and (min-height: 1000px) {
+/* @media screen and (min-width: 1900px) and (min-height: 1000px) {
     .preloader_text {
         top: 75% !important; 
     }
     .spinner_text {
         top: 32% !important; 
     }
-}
+} */
 /* Laptop size and horizontal screen (generally 1080x1920) */
-@media screen and (min-width: 1000px) and (min-height: 1900px) {
+/* @media screen and (min-width: 1000px) and (min-height: 1900px) {
     .preloader_text {
         top: 64% !important; 
     }
     .spinner_text {
         top: 18% !important; 
     }
-}
+} */
 
 /* Desktop full screen size (generally 1920x945) */
-@media screen and (min-width: 1900px) and (max-height: 945px) {
+/* @media screen and (min-width: 1900px) and (max-height: 945px) {
     .preloader_text {
         top: 79% !important; 
     }
     .spinner_text {
         top: 37% !important; 
     }
-}
+} */
 
 /* Desktop half screen size (generally 958x943) */
-@media screen and (min-width: 900px) and (min-height: 900px) {
+/* @media screen and (min-width: 900px) and (min-height: 900px) {
     .preloader_text {
         top: 78%; 
     }
     .spinner_text {
         top: 37%; 
     }
-}
+} */
 
 /* Middle large desktop half creen size (generally 1278x1303.33) */
-@media screen and (min-width: 1200px) and (min-height: 1300px) {
+/* @media screen and (min-width: 1200px) and (min-height: 1300px) {
     .spinner_text {
         top: 27% !important; 
     }
-}
+} */
 
 /* MacBook series and its default window size (generally 1440x678) */
-@media screen and (min-width: 1400px) and (min-height: 600px) {
+/* @media screen and (min-width: 1400px) and (min-height: 600px) {
     .preloader_text {
         top: 90%; 
     }
     .spinner_text {
         top: 50%; 
     }
-}
+} */
 
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
-@media screen and (min-width: 2500px) and (min-height: 1300px) {
+/* @media screen and (min-width: 2500px) and (min-height: 1300px) {
     .preloader_text {
         top: 70% !important; 
     }
     .spinner_text {
         top: 24% !important; 
     }
-}
+} */
 
 /* Larger desktop (iMac) default window tap size (generally 1200x1199) */
-@media screen and (min-width: 1200px) and (min-height: 1100px) {
+/* @media screen and (min-width: 1200px) and (min-height: 1100px) {
     .preloader_text {
         top: 72%; 
     }
     .spinner_text {
         top: 29%; 
     }
-}
+} */
