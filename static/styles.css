@@ -915,11 +915,18 @@ dd {
 
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media (min-height: 1300px) and (min-width: 2500px) {
+    /* Header Section */
+    .logo {
+        margin-left: 10px;
+    }
+    .nav_list {
+        padding-right: 20px;
+    }
     .preloader_text {
-        top: 70%; 
+        top: 69%; 
     }
     .spinner_text {
-        top: 24%; 
+        top: 22%; 
     }
 }
 
@@ -929,6 +936,6 @@ dd {
         top: 72%; 
     }
     .spinner_text {
-        top: 28%; 
+        top: 29%; 
     }
 }
