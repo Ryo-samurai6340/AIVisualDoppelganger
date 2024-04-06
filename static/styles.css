@@ -916,10 +916,10 @@ dd {
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media screen and (min-height: 1300px) and (min-width: 2500px) {
     /* Header Section */
-    .logo {
+    body .logo {
         margin-left: 10px !important;
     }
-    .nav_list {
+    body .nav_list {
         padding-right: 20px !important;
     }
     .preloader_text {
