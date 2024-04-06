@@ -761,7 +761,7 @@ dd {
     }
 }
 
-/*********** Responsive to adjust the location of spinner text *********/
+/*********** Responsive to adjust the position of spinner text *********/
 /* iPhone 5/SE series and vertical screen */ 
 @media screen and (min-height: 500px) and (min-width: 300px) {
     .preloader_text {
@@ -913,15 +913,26 @@ dd {
     }
 }
 
+/* Middle large desktop half creen size (generally 1278x1303.33) */
+@media screen and (min-height: 1300px) and (min-width: 1200px) {
+    .spinner_text {
+        top: 35%; 
+    }
+}
+
+/* MacBook series and its default window size (generally 1440x678) */
+@media screen and (min-height: 600px) and (min-width: 1400px) {
+    .preloader_text {
+        top: 78%; 
+    }
+    .spinner_text {
+        top: 37%; 
+    }
+}
+
+
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media screen and (min-height: 1300px) and (min-width: 2500px) {
-    /* Header Section */
-    .logo {
-        margin-left: -10px !important;
-    }
-    .nav_list {
-        padding-right: -20px !important;
-    }
     .preloader_text {
         top: 70% !important; 
     }
