@@ -914,7 +914,7 @@ dd {
 }
 
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
-@media screen and (min-height: 1300px) and (min-width: 2500px) {
+@media screen and (min-height: 1400px) and (min-width: 2500px) {
     /* Header Section */
     .logo {
         margin-left: 10px;
