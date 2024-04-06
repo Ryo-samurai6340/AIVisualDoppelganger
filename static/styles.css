@@ -916,7 +916,7 @@ dd {
 /* Middle large desktop half creen size (generally 1278x1303.33) */
 @media screen and (min-height: 1300px) and (min-width: 1200px) {
     .spinner_text {
-        top: 35%; 
+        top: 33%; 
     }
 }
 
@@ -926,10 +926,9 @@ dd {
         top: 78%; 
     }
     .spinner_text {
-        top: 37%; 
+        top: 42%; 
     }
 }
-
 
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media screen and (min-height: 1300px) and (min-width: 2500px) {
