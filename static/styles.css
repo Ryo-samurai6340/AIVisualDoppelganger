@@ -70,14 +70,6 @@ img {
     display: none;
 }
 
-/* #preloader img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-} */
-
 /**************************** Header ******************************/
 .header {
     background-color: var(--background-color);
@@ -265,7 +257,6 @@ dl {
 }
 
 dt {
-    /* padding-left: 100px; */
     padding: 0 100px 0 100px;
 }
 
@@ -861,10 +852,10 @@ dd {
 /* iPad Pro series and vertical screen */
 @media screen and (min-width: 1000px) and (min-height: 1300px) {
     .preloader_text {
-        top: 70%; 
+        top: 70% !important; 
     }
     .spinner_text {
-        top: 25%; 
+        top: 25% !important; 
     }
 }
 /* iPad Pro series and horizontal screen */
@@ -873,33 +864,36 @@ dd {
         top: 77%; 
     }
     .spinner_text {
-        top: 33%; 
+        top: 33% !important; 
     }
 }
 
 /* Laptop size and vertical screen (generally 1920x1080) */
 @media screen and (min-width: 1900px) and (min-height: 1000px) {
     .preloader_text {
-        top: 75%; 
+        top: 75% !important; 
+    }
+    .spinner_text {
+        top: 32% !important; 
     }
 }
 /* Laptop size and horizontal screen (generally 1080x1920) */
 @media screen and (min-width: 1000px) and (min-height: 1900px) {
     .preloader_text {
-        top: 64%; 
+        top: 64% !important; 
     }
     .spinner_text {
-        top: 18%; 
+        top: 18% !important; 
     }
 }
 
 /* Desktop full screen size (generally 1920x945) */
-@media screen and (min-width: 1900px) and (min-height: 900px) {
+@media screen and (min-width: 1900px) and (max-height: 945px) {
     .preloader_text {
-        top: 78%; 
+        top: 79% !important; 
     }
     .spinner_text {
-        top: 37%; 
+        top: 37% !important; 
     }
 }
 
@@ -916,17 +910,17 @@ dd {
 /* Middle large desktop half creen size (generally 1278x1303.33) */
 @media screen and (min-width: 1200px) and (min-height: 1300px) {
     .spinner_text {
-        top: 31% !important; 
+        top: 27% !important; 
     }
 }
 
 /* MacBook series and its default window size (generally 1440x678) */
 @media screen and (min-width: 1400px) and (min-height: 600px) {
     .preloader_text {
-        top: 88% !important; 
+        top: 90%; 
     }
     .spinner_text {
-        top: 50% !important; 
+        top: 50%; 
     }
 }
 
@@ -936,7 +930,7 @@ dd {
         top: 70% !important; 
     }
     .spinner_text {
-        top: 25% !important; 
+        top: 24% !important; 
     }
 }
 
