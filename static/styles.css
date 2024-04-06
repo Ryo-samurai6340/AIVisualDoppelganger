@@ -916,10 +916,10 @@ dd {
 /* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media (min-height: 1300px) and (min-width: 2500px) {
     .preloader_text {
-        top: 71%; 
+        top: 70%; 
     }
     .spinner_text {
-        top: 26%; 
+        top: 24%; 
     }
 }
 
