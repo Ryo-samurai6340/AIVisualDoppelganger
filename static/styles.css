@@ -877,13 +877,13 @@ dd {
     }
 }
 
-/* Laptop size and vertical screen */
+/* Laptop size and vertical screen (generally 1920x1080) */
 @media (min-height: 1000px) and (min-width: 1900px) {
     .preloader_text {
         top: 75%; 
     }
 }
-/* Laptop size and horizontal screen */
+/* Laptop size and horizontal screen (generally 1080x1920) */
 @media (min-width: 1000px) and (min-height: 1900px) {
     .preloader_text {
         top: 64%; 
@@ -893,7 +893,7 @@ dd {
     }
 }
 
-/* Desktop full screen size */
+/* Desktop full screen size (generally 1920x945) */
 @media (min-height: 900px) and (min-width: 1900px) {
     .preloader_text {
         top: 78%; 
@@ -903,7 +903,7 @@ dd {
     }
 }
 
-/* Desktop half screen size */
+/* Desktop half screen size (generally 958x943) */
 @media (min-height: 900px) and (min-width: 900px) {
     .preloader_text {
         top: 78%; 
@@ -913,7 +913,7 @@ dd {
     }
 }
 
-/* Larger desktop (iMac) full screen size */
+/* Larger desktop (iMac) full screen size (generally 2560x1440) */
 @media (min-height: 1300px) and (min-width: 2500px) {
     .preloader_text {
         top: 71%; 
@@ -923,12 +923,12 @@ dd {
     }
 }
 
-/* Larger desktop (iMac) default window tap size */
+/* Larger desktop (iMac) default window tap size (generally 1200x1199) */
 @media (min-height: 1100px) and (min-width: 1200px) {
     .preloader_text {
-        top: 71%; 
+        top: 72%; 
     }
     .spinner_text {
-        top: 26%; 
+        top: 28%; 
     }
 }
