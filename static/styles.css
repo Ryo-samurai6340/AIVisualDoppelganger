@@ -916,17 +916,17 @@ dd {
 /* Middle large desktop half creen size (generally 1278x1303.33) */
 @media screen and (min-height: 1300px) and (min-width: 1200px) {
     .spinner_text {
-        top: 33%; 
+        top: 31%; 
     }
 }
 
 /* MacBook series and its default window size (generally 1440x678) */
 @media screen and (min-height: 600px) and (min-width: 1400px) {
     .preloader_text {
-        top: 78%; 
+        top: 83%; 
     }
     .spinner_text {
-        top: 42%; 
+        top: 47%; 
     }
 }
 
