@@ -914,11 +914,11 @@ dd {
 }
 
 /* Middle large desktop half creen size (generally 1278x1303.33) */
-@media screen and (min-width: 1200px) and (min-height: 1300px) {
+/* @media screen and (min-width: 1200px) and (min-height: 1300px) {
     .spinner_text {
         top: 31% !important; 
     }
-}
+} */
 
 /* MacBook series and its default window size (generally 1440x678) */
 /* @media screen and (min-width: 1400px) and (min-height: 600px) {
