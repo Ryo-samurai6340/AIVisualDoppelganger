@@ -732,7 +732,7 @@ dd {
 
 .preloader_text {
     position: absolute; 
-    top: 89%; 
+    top: calc(50% + 135px); 
     left: 50%; 
     transform: translate(-50%, -50%);
     font-size: 20px;
