@@ -859,7 +859,7 @@ dd {
 }
 
 /* iPad Pro series and vertical screen */
-@media screen and (min-height: 1300px) and (min-width: 1000px) {
+@media (min-height: 1300px) and (min-width: 1000px) {
     .preloader_text {
         top: 70%; 
     }
@@ -868,7 +868,7 @@ dd {
     }
 }
 /* iPad Pro series and horizontal screen */
-@media screen and (min-width: 1300px) and (min-height: 1000px) {
+@media (min-width: 1300px) and (min-height: 1000px) {
     .preloader_text {
         top: 77%; 
     }
