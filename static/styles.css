@@ -923,10 +923,10 @@ dd {
 /* MacBook series and its default window size (generally 1440x678) */
 @media screen and (min-height: 600px) and (min-width: 1400px) {
     .preloader_text {
-        top: 83% !important; 
+        top: 88% !important; 
     }
     .spinner_text {
-        top: 49% !important; 
+        top: 50% !important; 
     }
 }
 
