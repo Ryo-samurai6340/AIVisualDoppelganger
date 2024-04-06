@@ -2,7 +2,7 @@ function showContent() {
     setTimeout(function() {
         document.getElementById('preloader').style.display = 'none';
         document.getElementById('body_content').style.display = 'block';
-    }, 300000);
+    }, 3000);
 }
 // Event listener to call showContent function when the page is fully loaded
 window.addEventListener('load', showContent);
