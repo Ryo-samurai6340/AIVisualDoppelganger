@@ -104,7 +104,8 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms)
-        .then(alert("You submitted the inquiry successfully! However, please note that if you submitted from iOS devices or did not receive an auto-reply after submission, it is likely that your submission has failed. Please try again from other operating systems to ensure the successful completion of your submission."));
+        .then(alert("Thank you for your inquiry submission. Please verify receipt of the auto-reply confirmation email. Failure to receive it may indicate a submission issue if sent from iOS devices, particularly iPhone or iPad. For assurance, consider resubmitting from alternative OS devices.
+"));
 }
 
 // To show scrollup 
