@@ -104,8 +104,7 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
     emailjs.send("service_txmsajv", "template_li27qnr", parms)
-        .then(alert("Thank you for your inquiry submission. Please verify receipt of the auto-reply confirmation email. Failure to receive it may indicate a submission issue if sent from iOS devices, particularly iPhone or iPad. For assurance, consider resubmitting from alternative OS devices.
-"));
+        .then(alert("Thank you for your inquiry submission. Please verify receipt of the auto-reply confirmation email. Failure to receive it may indicate a submission issue if sent from iOS devices, particularly iPhone or iPad. For assurance, consider resubmitting from alternative OS devices."));
 }
 
 // To show scrollup 
