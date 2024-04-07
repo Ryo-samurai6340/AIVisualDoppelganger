@@ -65,9 +65,81 @@ img {
     height: auto;
 }
 
-/************************* Page Preloading ***************************/
+/************************** Preloader Settings *************************/
 #body_content {
     display: none;
+}
+
+.preloader {
+    margin: 20px auto; 
+    padding-top: 50px; 
+    box-sizing: border-box; 
+    font-family: consolas; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 50vh;
+    position: relative; 
+    width: 250px; 
+    height: 250px; 
+    animation: animateBackgroundColor 10s linear infinite;
+}
+@keyframes animateBackgroundColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.preloader .blocks {
+    position: absolute; 
+    width: 8px; 
+    height: 25px; 
+    background: #050c09;
+    left: 50%;
+    border-radius: 8px;
+    transform: rotate(calc(18deg * var(--i)));
+    transform-origin: 0 125px;
+    animation: animate 1.9s ease-in-out infinite;
+    animation-delay: calc(0.05s * var(--i));
+}
+@keyframes animate {
+    0%, 50% {
+        box-shadow: none;
+    }
+    50.1%, 100% {
+        background: #0f0; 
+        box-shadow: 0 0 5px #0f0, 
+                    0 0 15px #0f0, 
+                    0 0 30px #0f0, 
+                    0 0 60px #0f0, 
+                    0 0 90px #0f0, ;
+    }
+}
+
+.preloader_text {
+    position: absolute; 
+    top: calc(50% + 135px); 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    animation: animateText 2s ease-in-out infinite; 
+    animation-delay: -1s;
+}
+
+@keyframes animateText {
+    0%, 50% {
+        background-color: none; 
+        text-shadow: none;
+    }
+    50.1%, 100% {
+        text-shadow: 0 0 5px #0f0, 
+                    0 0 15px #0f0;
+    }
 }
 
 /**************************** Header ******************************/
@@ -308,7 +380,7 @@ dd {
     min-height: 50vh;
     position: relative; 
     width: 250px; 
-    height: 290px; 
+    height: 250px; 
     animation: animateBackgroundColor 10s linear infinite;
 }
 @keyframes animateBackgroundColor {
@@ -401,6 +473,49 @@ dd {
 
 .footer__copyright {
     margin: 25px 0 0 0;
+}
+
+/**************************** Scroll Settings ***************************/
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: .6rem; 
+    border-radius: .5rem; 
+    background-color: hsl(207, 4%, 75%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: hsl(207, 4%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(207, 4%, 55%);
+}
+
+/* Scroll up */
+.scrollup {
+    position: fixed; 
+    right: 1rem; 
+    bottom: -30%;  /* scrollup button is invisible unless higher than 350 viewport height */
+    padding: .35rem; 
+    font-size: .8rem;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: bottom .3s, transform .3s;
+    border-radius: 20%;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.scrollup:hover {
+    transform: translateY(-.25rem);
+    opacity: 1;
+    background-color: var(--hover-color);
+}
+
+/* to show scrollup */
+.show-scroll {
+    bottom: 5rem;
 }
 
 /**************************** Responsive ******************************/
@@ -635,123 +750,14 @@ dd {
     }
 }
 
-/**************************** Scroll Settings ***************************/
-/* Scroll Bar */
-::-webkit-scrollbar {
-    width: .6rem; 
-    border-radius: .5rem; 
-    background-color: hsl(207, 4%, 75%);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: .5rem;
-    background-color: hsl(207, 4%, 65%);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(207, 4%, 55%);
-}
-
-/* Scroll up */
-.scrollup {
-    position: fixed; 
-    right: 1rem; 
-    bottom: -30%;  /* scrollup button is invisible unless higher than 350 viewport height */
-    padding: .35rem; 
-    font-size: .8rem;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    transition: bottom .3s, transform .3s;
-    border-radius: 20%;
-    font-weight: bold;
-    opacity: 0.5;
-}
-
-.scrollup:hover {
-    transform: translateY(-.25rem);
-    opacity: 1;
-    background-color: var(--hover-color);
-}
-
-/* to show scrollup */
-.show-scroll {
-    bottom: 5rem;
-}
-
-/************************** Preloader Settings *************************/
-.preloader {
-    margin: 20px auto; 
-    padding-top: 50px; 
-    box-sizing: border-box; 
-    font-family: consolas; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 50vh;
-    position: relative; 
-    width: 250px; 
-    height: 250px; 
-    animation: animateBackgroundColor 10s linear infinite;
-}
-@keyframes animateBackgroundColor {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
+/* To avoid overlap the loading spinner on horizontal screen */
+@media screen and (max-height: 600px) {
+    .originalImage-container {
+        margin-top: 80px;
     }
 }
 
-.preloader .blocks {
-    position: absolute; 
-    width: 8px; 
-    height: 25px; 
-    background: #050c09;
-    left: 50%;
-    border-radius: 8px;
-    transform: rotate(calc(18deg * var(--i)));
-    transform-origin: 0 125px;
-    animation: animate 1.9s ease-in-out infinite;
-    animation-delay: calc(0.05s * var(--i));
-}
-@keyframes animate {
-    0%, 50% {
-        box-shadow: none;
-    }
-    50.1%, 100% {
-        background: #0f0; 
-        box-shadow: 0 0 5px #0f0, 
-                    0 0 15px #0f0, 
-                    0 0 30px #0f0, 
-                    0 0 60px #0f0, 
-                    0 0 90px #0f0, ;
-    }
-}
-
-.preloader_text {
-    position: absolute; 
-    top: calc(50% + 135px); 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    animation: animateText 2s ease-in-out infinite; 
-    animation-delay: -1s;
-}
-
-@keyframes animateText {
-    0%, 50% {
-        background-color: none; 
-        text-shadow: none;
-    }
-    50.1%, 100% {
-        text-shadow: 0 0 5px #0f0, 
-                    0 0 15px #0f0;
-    }
-}
-
-/*********** Responsive to adjust the position of spinner text *********/
+/* To adjust the position of spinner text */
 /* iPhone 5/SE series and vertical screen */ 
 /* @media screen and (min-width: 300px) and (min-height: 500px) {
     .preloader_text {
