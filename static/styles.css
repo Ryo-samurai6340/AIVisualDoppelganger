@@ -517,7 +517,7 @@ dd {
     padding: .35rem; 
     font-size: .8rem;
     background-color: var(--text-color);
-    color: var(--background-color);
+    color: #000;
     transition: bottom .3s, transform .3s;
     border-radius: 20%;
     font-weight: bold;
