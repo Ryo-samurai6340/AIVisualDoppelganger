@@ -3,9 +3,9 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 
 ## Table of Contents
 - [Features](#features)
-- [Installation](#installation)
+- [Access or Installation](#access-or-installation)
 - [Usage](#usage)
-- [Technologies Used](#techused)
+- [Technologies Used](#technologies-used)
 
 ## Features
 - Image replication using advanced AI algorithms.
@@ -13,7 +13,8 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback. 
 
-## Installation
+## <a name="#access-or-installation"></a>Access or Installation
+- You can direcly access [AI Visual Doppelganger](https://aivisualdoppelganger.onrender.com), or you can also install follwings and then run it locally. 
 1. **Python:** Ensure Python is installed on your device.
 2. **Flask:** Install Flask by running `pip install Flask`.
 3. **Clone the Repository:** Clone the repository to your local machine by running `git clone https://github.com/your-username/AI-Visual-Doppelganger.git`.
@@ -29,7 +30,7 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 4. **Download the result:** Click the "Download" button to save the replicated image to your device.
 5. **Explore other sections:** Check out the "About", "FAQ", and "Contact" sections for more information and options. 
 
-## Technologies Used
+## <a name="#technologies-used"></a>Technologies Used
 - Python
 - Flask
 - JavaScript
