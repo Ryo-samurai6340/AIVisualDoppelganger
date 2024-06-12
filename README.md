@@ -13,7 +13,7 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback.
 
-![YouTube](https://www.youtube.com/watch?v=VT6eddrVVOA&feature=youtu.be)
+[![Watch the video](https://img.youtube.com/vi/VT6eddrVVOA?si=Xqikd8BP0JVDQipH/maxresdefault.jpg)](https://youtu.be/VT6eddrVVOA?si=Xqikd8BP0JVDQipH)
 
 ## <a name="#access-or-installation"></a>Access or Installation
 - You can direcly access [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com), or you can also install follwings and then run it locally. 
