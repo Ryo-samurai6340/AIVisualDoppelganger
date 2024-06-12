@@ -17,10 +17,10 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 
 ## Demo Video
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
-Click above image to watch demo video.
+Click the image to watch demo video.
 
 ## Try it
-- You can try it from here, [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com). 
+You can try it from here, [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com). 
 
 ## Installation
 1. **Python:** Ensure Python is installed on your device.
