@@ -16,10 +16,9 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - Contact form for inquiries and feedback.
 
 ## Demo Video
+Click the below image to watch demo video.
+
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
-
-
-Click the image to watch demo video.
 
 ## Try it
 You can try it from here, [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com). 
