@@ -14,7 +14,7 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - Contact form for inquiries and feedback. 
 
 ## <a name="#access-or-installation"></a>Access or Installation
-- You can direcly access [AI Visual Doppelganger](https://aivisualdoppelganger.onrender.com), or you can also install follwings and then run it locally. 
+- You can direcly access [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com), or you can also install follwings and then run it locally. 
 1. **Python:** Ensure Python is installed on your device.
 2. **Flask:** Install Flask by running `pip install Flask`.
 3. **Clone the Repository:** Clone the repository to your local machine by running `git clone https://github.com/your-username/AI-Visual-Doppelganger.git`.
