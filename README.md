@@ -24,10 +24,10 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 7. **Access the Application:** After running the Flask application, you can access the project in your web browser by visiting ``.
 
 ## Usage
-1. **Upload an image:** Click on the "Try" section, then upload an image. ![Project Screenshot]("C:\Users\rh634\OneDrive\Documents\GitHub\AI Visual Doppelganger\uploads\Screenshot 2024-06-11 225544.png")
-2. **Start replication process:** Click the "Replicate" button to start the process. ![Project Screenshot]("C:\Users\rh634\OneDrive\Documents\GitHub\AI Visual Doppelganger\uploads\Screenshot 2024-06-11 225557.png")
+1. **Upload an image:** Click on the "Try" section, then upload an image. ![Project Screenshot](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/uploads/screenshot1.png)
+2. **Start replication process:** Click the "Replicate" button to start the process. ![Project Screenshot](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/uploads/screenshot2.png)
 3. **View result:** Once the process is complete, the original image and its replicated version will be displayed.
-4. **Download the result:** Click the "Download" button to save the replicated image to your device. ![Project Screenshot]("C:\Users\rh634\OneDrive\Documents\GitHub\AI Visual Doppelganger\uploads\Screenshot 2024-06-11 225944.png")
+4. **Download the result:** Click the "Download" button to save the replicated image to your device. ![Project Screenshot](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/uploads/screenshot3.png)
 5. **Explore other sections:** Check out the "About", "FAQ", and "Contact" sections for more information and options.
 
 ## <a name="#technologies-used"></a>Technologies Used
