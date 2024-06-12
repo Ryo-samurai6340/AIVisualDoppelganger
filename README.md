@@ -3,7 +3,9 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 
 ## Table of Contents
 - [Features](#features)
-- [Access or Installation](#access-or-installation)
+- [Demo Video](#demo-video)
+- [Try it](#try-it)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 
@@ -13,13 +15,14 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback.
 
+## Demo Video
+Click below to watch demo video.
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
 
-[![](https://img.youtube.com/vi/VT6eddrVVOA/maxresdefault/0.jpg)](https://www.youtube.com/watch?v=VT6eddrVVOA)
+## Try it
+- You can try it from here, [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com). 
 
-
-## <a name="#access-or-installation"></a>Access or Installation
-- You can direcly access [AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com), or you can also install follwings and then run it locally. 
+## Installation
 1. **Python:** Ensure Python is installed on your device.
 2. **Flask:** Install Flask by running `pip install Flask`.
 3. **Clone the Repository:** Clone the repository to your local machine by running `git clone https://github.com/your-username/AI-Visual-Doppelganger.git`.
