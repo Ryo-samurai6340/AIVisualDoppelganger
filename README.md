@@ -13,7 +13,7 @@ A Flask web application to replicate images in a few minutes. It employs genetic
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback.
 
-[![Watch demo video](https://img.youtube.com/vi/VT6eddrVVOA/maxresdefault.jpg)](https://www.youtube.com/watch?v=VT6eddrVVOA)
+[![Watch demo video](https://img.youtube.com/vi/VT6eddrVVOA/maxresdefault/0.jpg)](https://www.youtube.com/watch?v=VT6eddrVVOA)
 
 
 ## <a name="#access-or-installation"></a>Access or Installation
