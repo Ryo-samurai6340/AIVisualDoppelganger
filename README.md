@@ -34,12 +34,12 @@ You can try it from here, [AI Visual Doppelganger](https://ai-visual-doppelgange
 
 ## Usage
 1. **Upload an image:** Click on the "Try" section, then upload an image.
-![screenshot1](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/74a862d6-5560-400f-be91-2365108a7c2f)
+![Screenshot 1](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/b73ba512-00fa-4d0e-9e29-93111a82419f)
 2. **Start replication process:** Click the "Replicate" button to start the process.
-![screenshot2](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/bd6f0b02-9728-495b-9e47-6d719aa6ad4e)
+![Screenshot 2](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/6c2cbd30-72bb-4902-b1e1-9b61b73d63f1)
 3. **View result:** Once the process is complete, the original image and its replicated version will be displayed.
 4. **Download the result:** Click the "Download" button to save the replicated image to your device.
-![screenshot3](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/2ef2343f-8a6d-4b8e-9548-d3d7577a7eca)
+![Screenshot 3](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/a3bc7b9d-30c0-45d4-a501-054d0febea0b)
 5. **Explore other sections:** Check out the "About", "FAQ", and "Contact" sections for more information and options.
 
 ## <a name="#technologies-used"></a>Technologies Used
