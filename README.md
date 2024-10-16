@@ -1,5 +1,5 @@
 # AI Visual Doppelganger
-[AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com/) is a Flask-based web application designed to replicate images in a few minutes using AI. It employs genetic algorithms to evolve a population of binary individuals, gradually optimizing them to match the input image while introducing a camouflage pattern.
+[AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com/) is a Flask-based web application tool designed to replicate images in a few minutes using AI. It employs genetic algorithms to evolve a population of binary individuals, gradually optimizing them to match the input image while introducing a camouflage pattern.
 
 ## Table of Contents
 - [Features](#features)
@@ -14,7 +14,7 @@
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback.
 
-## Demo Video
+## Demo Video [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=plastic&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s)
 Click the image to watch demo video on YouTube.
 
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
