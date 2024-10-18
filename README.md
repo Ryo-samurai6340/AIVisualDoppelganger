@@ -3,7 +3,7 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Demo Video](#demo-video)
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
@@ -14,8 +14,11 @@
 - FAQ section for common queries related to the project.
 - Contact form for inquiries and feedback.
 
-## Demo Video [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=plastic&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s)
-Click the image to watch demo video on YouTube.
+## Demo
+**Live Demo:** https://ai-visual-doppelganger.onrender.com/
+
+**Video Demo:** 
+Click the image to watch demo video on YouTube. [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=plastic&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s)
 
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
 
