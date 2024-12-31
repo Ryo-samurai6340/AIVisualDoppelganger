@@ -34,11 +34,11 @@ Click thumbnail to watch demo video on YouTube.
 
 
 ## Installation
-- **Prerequisities**: Python is installed on your machine.
+- **Prerequisities**: Git and Python are installed on your machine.
 
-1. Clon this repo: 
+1. Clone the repo: 
 ```
-https://github.com/your_username/AI-Visual-Doppelganger.git
+git clone https://github.com/your_username/AI-Visual-Doppelganger.git
 ```
 
 2. Install dependencies:
