@@ -1,12 +1,11 @@
 # AI Visual Doppelganger
-[AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com/) is an web application tool designed to replicate images in a few minutes using AI. It employs genetic algorithms to evolve a population of binary individuals, gradually optimizing them to match the input image while introducing a camouflage pattern.
+[AI Visual Doppelganger](https://ai-visual-doppelganger.onrender.com/) is a web application tool designed to replicate images in a few minutes powered by AI. It employs genetic algorithms to evolve a population of binary individuals, gradually optimizing them to match the input image while introducing a camouflage pattern.
 
 ## Table of Contents
-
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Demo](#demo)
+- [YouTube Demo](#youtube-demo)
 - [Usage](#usage)
 - [License](#license)
 
@@ -28,14 +27,8 @@
 ![Render](https://img.shields.io/badge/Render-f2f4ef.svg?style=for-the-badge&logo=render&logoColor=000)
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 
-## Demo
-
-### Live Demo
-https://ai-visual-doppelganger.onrender.com/
-
-### Video Demo 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=plastic&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s)
-https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s
+## YouTube Demo 
+Click thumbnail to watch demo video on YouTube.
 
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
 
@@ -45,7 +38,7 @@ https://www.youtube.com/watch?v=VT6eddrVVOA&t=50s
 
 1. Clon this repo: 
 ```
-https://github.com/Ryo-samuraiJP/AI-Visual-Doppelganger.git
+https://github.com/your_username/AI-Visual-Doppelganger.git
 ```
 
 2. Install dependencies:
