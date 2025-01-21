@@ -28,7 +28,7 @@
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 
 ## YouTube Demo 
-Click thumbnail to watch demo video on YouTube.
+Watch the [demo video](https://www.youtube.com/watch?v=VT6eddrVVOA) on YouTube.
 
 [![Watch demo video](https://github.com/Ryo-samurai6340/AIVisualDoppelganger-image-replicator/assets/131563887/de8c4d0c-0812-4d55-84ac-09e8ea83de17)](https://www.youtube.com/watch?v=VT6eddrVVOA)
 
